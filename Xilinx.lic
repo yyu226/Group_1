@@ -1,0 +1,25 @@
+# ----- REMOVE LINES ABOVE HERE --------------------------
+#
+# This license is valid from Wed Jan 14 23:24:59 UTC 2015.
+#
+# This is license NODELOCKED to HOSTID=ANY;
+# there is no need to run lmgrd for this license.
+#
+#
+# This is a permanent license generated on Wed Jan 14 23:24:59 UTC 2015
+INCREMENT ISE_WebPACK xilinxd 2016.01 permanent uncounted \
+45FD7621ADCC \
+VENDOR_STRING=yyu226,ISE_WebPACK,software,permanent,_210981254_0_0_774 \
+HOSTID=ANY ISSUER="Xilinx Inc" START=14-Jan-2015 TS_OK
+#
+#
+# ----------------------------------------------------------------------
+#  The following PACKAGE definition is a REQUIRED part of this license:
+#
+PACKAGE ISE_WebPACK xilinxd 2016.01 D95B108801E7 COMPONENTS="SDK \
+WebPACK XC7Z010 XC7Z030 xps_tdp XC7Z020 PlanAhead" \
+OPTIONS=SUITE
+#
+# ------------------------------------------------------------------------------
+#
+# ----- REMOVE LINES BELOW HERE --------------------------

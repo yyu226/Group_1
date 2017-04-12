@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="4">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+		<Mode Id="JTAG"/>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="clk_12m" OffChipTerm="NONE"/>
+		<Port Name="LEDr" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LEDg" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LEDo" OffChipTerm="FP_VTT_50"/>
+	</PortProps>
+</Compat>
+

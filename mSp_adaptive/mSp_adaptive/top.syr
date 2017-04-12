@@ -1,0 +1,2199 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx25-3-ftg256
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\pll.v" into library work
+Parsing module <pll>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\pll\example_design\pll_exdes.v" into library work
+Parsing module <pll_exdes>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\TDMS_encoder.v" into library work
+Parsing module <TMDS_encoder>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\fifo_vga.v" into library work
+Parsing module <fifo_vga>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\fifo_8to1.v" into library work
+Parsing module <fifo_8to1>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\data_path.v" into library work
+Parsing module <sdr_data_path>.
+Parsing verilog file "Sdram_Params.h" included at line 30.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\controller.v" into library work
+Parsing module <control_interface>.
+Parsing verilog file "Sdram_Params.h" included at line 41.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\command.v" into library work
+Parsing module <command>.
+Parsing verilog file "Sdram_Params.h" included at line 47.
+WARNING:HDLCompiler:98 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\command.v" Line 78: CS_N was previously declared with a range
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" into library work
+Parsing module <spi_host>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" into library work
+Parsing module <sdram_top>.
+Parsing verilog file "Sdram_Params.h" included at line 67.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\hdmi_top.v" into library work
+Parsing module <hdmi_top>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" into library work
+Parsing module <top>.
+Parsing verilog file "Sdram_Params.h" included at line 64.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <pll>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=20,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=10,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=10,CLKOUT1_PHASE=-139.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=4,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=20,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DIVIDE=22,CLKOUT4_PHASE=0.0,CLKOUT4_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\pll.v" Line 134: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\pll.v" Line 135: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <ODDR2>.
+
+Elaborating module <hdmi_top>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\hdmi_top.v" Line 90: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\hdmi_top.v" Line 100: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <TMDS_encoder>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\hdmi_top.v" Line 140: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <OBUFDS>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 218: Result of 3-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <sdram_top>.
+
+Elaborating module <control_interface>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\controller.v" Line 170: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 254: Size mismatch in connection of port <CMD>. Formal port size is 3-bit while actual signal size is 2-bit.
+
+Elaborating module <command>.
+
+Elaborating module <sdr_data_path>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 300: Assignment to IDQM ignored, since the identifier is never used
+
+Elaborating module <fifo_8to1>.
+WARNING:HDLCompiler:1499 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\fifo_8to1.v" Line 39: Empty module <fifo_8to1> remains a black box.
+
+Elaborating module <fifo_vga>.
+WARNING:HDLCompiler:1499 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\ipcore_dir\fifo_vga.v" Line 39: Empty module <fifo_vga> remains a black box.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 343: Assignment to EPT0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 345: Assignment to write_side_fifo_wusedw ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 356: Assignment to wr_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 425: Result of 32-bit expression is truncated to fit in 19-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 548: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 579: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 581: Result of 28-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\sdram_top.v" Line 590: Assignment to rRD2_MAX_ADDR ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 234: Size mismatch in connection of port <WR_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 246: Size mismatch in connection of port <RD1_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 251: Size mismatch in connection of port <RD2_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+
+Elaborating module <spi_host>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 127: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 247: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 277: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 667: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 865: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 882: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 899: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 916: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 933: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 950: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 967: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 986: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1097: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1195: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1228: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1242: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1328: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1374: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1354: Assignment to RD_EN ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\spi_host.v" Line 1424: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 286: Assignment to START ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 294: Result of 27-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 295: Result of 27-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 326: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 372: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.v" Line 379: Signal <SYNC_OUTPUT1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/top.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/top.v" line 196: Output port <LED> of the instance <HDMI_PORT2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/top.v" line 270: Output port <cs_flash> of the instance <IS0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/top.v" line 270: Output port <start> of the instance <IS0> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <switch>.
+    Found 2-bit register for signal <delay_st>.
+    Found 24-bit register for signal <minADDR>.
+    Found 24-bit register for signal <maxADDR>.
+    Found 3-bit register for signal <rLED>.
+    Found 1-bit register for signal <sgnl>.
+    Found 1-bit register for signal <clock_25m>.
+    Found finite state machine <FSM_0> for signal <delay_st>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | vSYNC (rising_edge)                            |
+    | Reset              | SYNC_OUTPUT1 (negative)                        |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 11                                             |
+    | Power Up State     | 11                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 25-bit subtractor for signal <GND_1_o_GND_1_o_sub_30_OUT> created at line 325.
+    Found 24-bit adder for signal <minADDR[23]_GND_1_o_add_4_OUT> created at line 246.
+    Found 16x8-bit multiplier for signal <PWR_1_o_fNo[7]_MuLt_7_OUT> created at line 293.
+    Found 19x8-bit multiplier for signal <n0077> created at line 295.
+    Found 24-bit 3-to-1 multiplexer for signal <pMode[1]_PWR_1_o_wide_mux_10_OUT> created at line 291.
+    Found 32-bit comparator greater for signal <GND_1_o_GND_1_o_LessThan_31_o> created at line 325
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  15 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <pll>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/ipcore_dir/pll.v".
+    Summary:
+	no macro.
+Unit <pll> synthesized.
+
+Synthesizing Unit <hdmi_top>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/hdmi_top.v".
+    Found 10-bit register for signal <contX>.
+    Found 10-bit register for signal <contY>.
+    Found 1-bit register for signal <syncH>.
+    Found 1-bit register for signal <syncV>.
+    Found 1-bit register for signal <actvA>.
+    Found 1-bit register for signal <actvAa>.
+    Found 10-bit register for signal <TMDS_shift_red>.
+    Found 10-bit register for signal <TMDS_shift_green>.
+    Found 10-bit register for signal <TMDS_shift_blue>.
+    Found 4-bit register for signal <TMDS_modulo>.
+    Found 1-bit register for signal <shift_LOAD>.
+    Found 32-bit register for signal <cntr>.
+    Found 32-bit adder for signal <cntr[31]_GND_7_o_add_1_OUT> created at line 81.
+    Found 10-bit adder for signal <contX[9]_GND_7_o_add_6_OUT> created at line 90.
+    Found 10-bit adder for signal <contY[9]_GND_7_o_add_12_OUT> created at line 100.
+    Found 5-bit adder for signal <n0091[4:0]> created at line 140.
+    Found 10-bit comparator lessequal for signal <n0012> created at line 107
+    Found 10-bit comparator greater for signal <contX[9]_PWR_7_o_LessThan_19_o> created at line 107
+    Found 10-bit comparator lessequal for signal <n0017> created at line 109
+    Found 10-bit comparator greater for signal <contY[9]_GND_7_o_LessThan_22_o> created at line 109
+    Found 10-bit comparator greater for signal <contX[9]_PWR_7_o_LessThan_24_o> created at line 111
+    Found 10-bit comparator greater for signal <contY[9]_GND_7_o_LessThan_25_o> created at line 111
+    Found 10-bit comparator greater for signal <PWR_7_o_contX[9]_LessThan_27_o> created at line 115
+    Found 10-bit comparator greater for signal <contX[9]_PWR_7_o_LessThan_29_o> created at line 115
+    Found 10-bit comparator greater for signal <contY[9]_GND_7_o_LessThan_32_o> created at line 115
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  91 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <hdmi_top> synthesized.
+
+Synthesizing Unit <TMDS_encoder>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/tdms_encoder.v".
+    Found 4-bit register for signal <balance_acc>.
+    Found 10-bit register for signal <TMDS>.
+    Found 4-bit subtractor for signal <balance_acc_inc> created at line 37.
+    Found 4-bit subtractor for signal <balance_acc[3]_balance_acc_inc[3]_sub_29_OUT> created at line 38.
+    Found 2-bit adder for signal <n0109[1:0]> created at line 29.
+    Found 3-bit adder for signal <n0112[2:0]> created at line 29.
+    Found 2-bit adder for signal <n0130[1:0]> created at line 34.
+    Found 3-bit adder for signal <n0133[2:0]> created at line 34.
+    Found 4-bit adder for signal <balance_acc[3]_balance_acc_inc[3]_add_29_OUT> created at line 38.
+    Found 4-bit adder for signal <_n0160> created at line 29.
+    Found 4-bit adder for signal <_n0161> created at line 29.
+    Found 4-bit adder for signal <_n0162> created at line 29.
+    Found 4-bit adder for signal <_n0163> created at line 29.
+    Found 4-bit adder for signal <Nb1s> created at line 29.
+    Found 4-bit adder for signal <_n0165> created at line 34.
+    Found 4-bit subtractor for signal <_n0166> created at line 34.
+    Found 4-bit adder for signal <_n0167> created at line 34.
+    Found 4-bit adder for signal <_n0168> created at line 34.
+    Found 4-bit adder for signal <_n0169> created at line 34.
+    Found 4-bit adder for signal <balance> created at line 34.
+    Found 4-bit comparator greater for signal <GND_8_o_Nb1s[3]_LessThan_8_o> created at line 30
+    Found 1-bit comparator equal for signal <balance_sign_eq> created at line 35
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <TMDS_encoder> synthesized.
+
+Synthesizing Unit <sdram_top>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+WARNING:Xst:647 - Input <RD2_ADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_MAX_ADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_LENGTH<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 294: Output port <DQM> of the instance <u_sdr_data_path> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 304: Output port <rd_data_count> of the instance <ONE_BIT_OUT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 304: Output port <full> of the instance <ONE_BIT_OUT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 304: Output port <empty> of the instance <ONE_BIT_OUT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 319: Output port <rd_data_count> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 319: Output port <full> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 334: Output port <wr_data_count> of the instance <WR_16x16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 334: Output port <full> of the instance <WR_16x16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/sdram_top.v" line 334: Output port <empty> of the instance <WR_16x16> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <pre_fifo_rst>.
+    Found 1-bit register for signal <rst_sync>.
+    Found 13-bit register for signal <SA>.
+    Found 2-bit register for signal <BA>.
+    Found 1-bit register for signal <CS_N>.
+    Found 1-bit register for signal <CKE>.
+    Found 1-bit register for signal <RAS_N>.
+    Found 1-bit register for signal <CAS_N>.
+    Found 1-bit register for signal <WE_N>.
+    Found 1-bit register for signal <PM_STOP>.
+    Found 1-bit register for signal <PM_DONE>.
+    Found 2-bit register for signal <DQM>.
+    Found 16-bit register for signal <mDATAOUT>.
+    Found 2-bit register for signal <CMD>.
+    Found 10-bit register for signal <ST>.
+    Found 1-bit register for signal <Pre_RD>.
+    Found 1-bit register for signal <Pre_WR>.
+    Found 1-bit register for signal <Read>.
+    Found 1-bit register for signal <Write>.
+    Found 1-bit register for signal <OUT_VALID>.
+    Found 1-bit register for signal <IN_REQ>.
+    Found 1-bit register for signal <mWR_DONE>.
+    Found 1-bit register for signal <mRD_DONE>.
+    Found 24-bit register for signal <pixel_counter>.
+    Found 24-bit register for signal <rWR_ADDR>.
+    Found 1-bit register for signal <mWR>.
+    Found 1-bit register for signal <mRD>.
+    Found 24-bit register for signal <mADDR>.
+    Found 8-bit register for signal <mLENGTH>.
+    Found 2-bit register for signal <RD_MASK>.
+    Found 2-bit register for signal <WR_MASK>.
+    Found 1-bit register for signal <fifo_rst>.
+    Found 1-bit register for signal <rRD1_ADDR<23>>.
+    Found 1-bit register for signal <rRD1_ADDR<22>>.
+    Found 1-bit register for signal <rRD1_ADDR<21>>.
+    Found 1-bit register for signal <rRD1_ADDR<20>>.
+    Found 1-bit register for signal <rRD1_ADDR<19>>.
+    Found 1-bit register for signal <rRD1_ADDR<18>>.
+    Found 1-bit register for signal <rRD1_ADDR<17>>.
+    Found 1-bit register for signal <rRD1_ADDR<16>>.
+    Found 1-bit register for signal <rRD1_ADDR<15>>.
+    Found 1-bit register for signal <rRD1_ADDR<14>>.
+    Found 1-bit register for signal <rRD1_ADDR<13>>.
+    Found 1-bit register for signal <rRD1_ADDR<12>>.
+    Found 1-bit register for signal <rRD1_ADDR<11>>.
+    Found 1-bit register for signal <rRD1_ADDR<10>>.
+    Found 1-bit register for signal <rRD1_ADDR<9>>.
+    Found 1-bit register for signal <rRD1_ADDR<8>>.
+    Found 1-bit register for signal <rRD1_ADDR<7>>.
+    Found 1-bit register for signal <rRD1_ADDR<6>>.
+    Found 1-bit register for signal <rRD1_ADDR<5>>.
+    Found 1-bit register for signal <rRD1_ADDR<4>>.
+    Found 1-bit register for signal <rRD1_ADDR<3>>.
+    Found 1-bit register for signal <rRD1_ADDR<2>>.
+    Found 1-bit register for signal <rRD1_ADDR<1>>.
+    Found 1-bit register for signal <rRD1_ADDR<0>>.
+    Found finite state machine <FSM_1> for signal <WR_MASK>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 8                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | mWR_DONE (positive)                            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <GND_10_o_GND_10_o_sub_62_OUT> created at line 572.
+    Found 24-bit subtractor for signal <rWR_MAX_ADDR[23]_GND_10_o_sub_80_OUT> created at line 635.
+    Found 24-bit subtractor for signal <rRD1_MAX_ADDR[23]_GND_10_o_sub_85_OUT> created at line 645.
+    Found 28-bit subtractor for signal <GND_10_o_GND_10_o_sub_109_OUT> created at line 710.
+    Found 9-bit adder for signal <n0489[8:0][8:0]> created at line 490.
+    Found 9-bit adder for signal <n0491[8:0][8:0]> created at line 498.
+    Found 10-bit adder for signal <_n0530> created at line 498.
+    Found 10-bit adder for signal <_n0542> created at line 547.
+    Found 10-bit adder for signal <ST[9]_GND_10_o_add_48_OUT> created at line 548.
+    Found 24-bit adder for signal <pixel_counter[23]_GND_10_o_add_67_OUT> created at line 579.
+    Found 27-bit adder for signal <n0400> created at line 581.
+    Found 24-bit adder for signal <rWR_ADDR[23]_GND_10_o_add_81_OUT> created at line 636.
+    Found 24-bit adder for signal <rRD1_ADDR[23]_GND_10_o_add_86_OUT> created at line 647.
+    Found 19x8-bit multiplier for signal <n0500> created at line 581.
+    Found 1-bit tristate buffer for signal <DQ<15>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<14>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<13>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<12>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<11>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<10>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<9>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<8>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<7>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<6>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<5>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<4>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<3>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<2>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<1>> created at line 352
+    Found 1-bit tristate buffer for signal <DQ<0>> created at line 352
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_MAX_ADDR<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rRD1_MAX_ADDR<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_LENGTH<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <rWR_LENGTH<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator lessequal for signal <n0050> created at line 499
+    Found 32-bit comparator equal for signal <GND_10_o_GND_10_o_equal_63_o> created at line 572
+    Found 24-bit comparator greater for signal <pixel_counter[23]_PPF_CONSTANT[18]_LessThan_67_o> created at line 578
+    Found 24-bit comparator lessequal for signal <rWR_ADDR[23]_rWR_MAX_ADDR[23]_LessThan_81_o> created at line 635
+    Found 24-bit comparator greater for signal <rRD1_ADDR[23]_rRD1_MAX_ADDR[23]_LessThan_86_o> created at line 645
+    Found 32-bit comparator greater for signal <GND_10_o_GND_10_o_LessThan_110_o> created at line 710
+    Found 7-bit comparator greater for signal <n0231> created at line 712
+    Found 8-bit comparator greater for signal <GND_10_o_rRD1_LENGTH[7]_LessThan_116_o> created at line 733
+    Found 8-bit comparator greater for signal <GND_10_o_rRD1_LENGTH[7]_LessThan_118_o> created at line 733
+    Found 10-bit comparator equal for signal <GND_10_o_GND_10_o_equal_30_o> created at line 498
+    Found 10-bit comparator equal for signal <GND_10_o_GND_10_o_equal_65_o> created at line 574
+    Found 10-bit comparator equal for signal <GND_10_o_GND_10_o_equal_18_o> created at line 490
+    Found 10-bit comparator equal for signal <n0083> created at line 558
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  13 Adder/Subtractor(s).
+	inferred 171 D-type flip-flop(s).
+	inferred  50 Latch(s).
+	inferred  13 Comparator(s).
+	inferred  18 Multiplexer(s).
+	inferred  16 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <sdram_top> synthesized.
+
+Synthesizing Unit <control_interface>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/controller.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+    Found 1-bit register for signal <READA>.
+    Found 1-bit register for signal <WRITEA>.
+    Found 24-bit register for signal <SADDR>.
+    Found 1-bit register for signal <CMD_ACK>.
+    Found 16-bit register for signal <timer>.
+    Found 1-bit register for signal <REF_REQ>.
+    Found 16-bit register for signal <init_timer>.
+    Found 1-bit register for signal <REFRESH>.
+    Found 1-bit register for signal <PRECHARGE>.
+    Found 1-bit register for signal <LOAD_MODE>.
+    Found 1-bit register for signal <INIT_REQ>.
+    Found 1-bit register for signal <NOP>.
+    Found 16-bit subtractor for signal <timer[15]_GND_11_o_sub_12_OUT> created at line 149.
+    Found 16-bit adder for signal <init_timer[15]_GND_11_o_add_18_OUT> created at line 170.
+    Found 16-bit comparator greater for signal <init_timer[15]_GND_11_o_LessThan_18_o> created at line 169
+    Found 16-bit comparator greater for signal <init_timer[15]_GND_11_o_LessThan_21_o> created at line 172
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <control_interface> synthesized.
+
+Synthesizing Unit <command>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/command.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+WARNING:Xst:647 - Input <NOP> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PM_DONE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <do_writea>.
+    Found 1-bit register for signal <do_refresh>.
+    Found 1-bit register for signal <do_precharge>.
+    Found 1-bit register for signal <do_load_mode>.
+    Found 1-bit register for signal <do_initial>.
+    Found 1-bit register for signal <command_done>.
+    Found 8-bit register for signal <command_delay>.
+    Found 1-bit register for signal <rw_flag>.
+    Found 4-bit register for signal <rp_shift>.
+    Found 1-bit register for signal <rp_done>.
+    Found 1-bit register for signal <ex_read>.
+    Found 1-bit register for signal <ex_write>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <oe4>.
+    Found 2-bit register for signal <rw_shift>.
+    Found 1-bit register for signal <do_rw>.
+    Found 1-bit register for signal <CM_ACK>.
+    Found 1-bit register for signal <REF_ACK>.
+    Found 13-bit register for signal <SA>.
+    Found 2-bit register for signal <BA>.
+    Found 1-bit register for signal <RAS_N>.
+    Found 1-bit register for signal <CAS_N>.
+    Found 1-bit register for signal <WE_N>.
+    Found 1-bit register for signal <do_reada>.
+    Found finite state machine <FSM_2> for signal <rw_shift>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | GND_12_o_GND_12_o_OR_70_o (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 10                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    WARNING:Xst:2404 -  FFs/Latches <CS_N<0:0>> (without init value) have a constant value of 0 in block <command>.
+    WARNING:Xst:2404 -  FFs/Latches <CKE<0:0>> (without init value) have a constant value of 1 in block <command>.
+    Summary:
+	inferred  46 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <command> synthesized.
+
+Synthesizing Unit <sdr_data_path>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/data_path.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+    WARNING:Xst:2404 -  FFs/Latches <DQM<1:0>> (without init value) have a constant value of 0 in block <sdr_data_path>.
+    Summary:
+	no macro.
+Unit <sdr_data_path> synthesized.
+
+Synthesizing Unit <spi_host>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/msp_adaptive/msp_adaptive/spi_host.v".
+WARNING:Xst:647 - Input <wr_avl> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <state>.
+    Found 1-bit register for signal <clk_sel>.
+    Found 8-bit register for signal <rcmd1>.
+    Found 8-bit register for signal <rcmd2>.
+    Found 8-bit register for signal <rcmd3>.
+    Found 8-bit register for signal <rcmd4>.
+    Found 8-bit register for signal <rcmd5>.
+    Found 8-bit register for signal <rcmd6>.
+    Found 1-bit register for signal <mo>.
+    Found 1-bit register for signal <cs1>.
+    Found 5-bit register for signal <ncr>.
+    Found 8-bit register for signal <nxt>.
+    Found 8-bit register for signal <rcvb>.
+    Found 3-bit register for signal <led_control>.
+    Found 8-bit register for signal <s2>.
+    Found 8-bit register for signal <n2>.
+    Found 8-bit register for signal <rcvb2>.
+    Found 32-bit register for signal <block>.
+    Found 3-bit register for signal <led_control2>.
+    Found 2-bit register for signal <pixel_mode>.
+    Found 8-bit register for signal <frame_no>.
+    Found 1-bit register for signal <start>.
+    Found 1-bit register for signal <m2>.
+    Found 1-bit register for signal <cs2>.
+    Found 8-bit register for signal <rcmd1i>.
+    Found 8-bit register for signal <rcmd2i>.
+    Found 8-bit register for signal <rcmd3i>.
+    Found 8-bit register for signal <rcmd4i>.
+    Found 8-bit register for signal <rcmd5i>.
+    Found 5-bit register for signal <ncr2>.
+    Found 10-bit register for signal <bc>.
+    Found 2-bit register for signal <even_odd>.
+    Found 24-bit register for signal <n0855[23:0]>.
+    Found 512-bit register for signal <n0856[511:0]>.
+    Found 512-bit register for signal <n0857[511:0]>.
+    Found 11-bit register for signal <delay>.
+    Found 1-bit register for signal <WR_CLK>.
+    Found 6-bit register for signal <idx>.
+    Found 16-bit register for signal <data>.
+    Found 3-bit register for signal <stt>.
+    Found 1-bit register for signal <rw_sync>.
+    Found 2-bit register for signal <flip>.
+    Found 8-bit register for signal <dctr>.
+    Found 1-bit register for signal <reset>.
+    Found 7-bit register for signal <cntr>.
+    Found finite state machine <FSM_3> for signal <stt>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | cryst (rising_edge)                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit subtractor for signal <GND_115_o_GND_115_o_sub_431_OUT> created at line 1280.
+    Found 6-bit subtractor for signal <n1144[5:0]> created at line 1311.
+    Found 7-bit adder for signal <cntr[6]_GND_115_o_add_1_OUT> created at line 127.
+    Found 5-bit adder for signal <ncr[4]_GND_115_o_add_11_OUT> created at line 277.
+    Found 8-bit adder for signal <state[7]_GND_115_o_add_141_OUT> created at line 667.
+    Found 9-bit adder for signal <n0951> created at line 865.
+    Found 32-bit adder for signal <block[31]_GND_115_o_add_346_OUT> created at line 1066.
+    Found 8-bit adder for signal <s2[7]_GND_115_o_add_362_OUT> created at line 1097.
+    Found 5-bit adder for signal <ncr2[4]_GND_115_o_add_414_OUT> created at line 1195.
+    Found 10-bit adder for signal <bc[9]_GND_115_o_add_418_OUT> created at line 1242.
+    Found 16-bit adder for signal <cache0[31][15]_GND_115_o_add_509_OUT> created at line 1292.
+    Found 16-bit adder for signal <cache1[31][15]_GND_115_o_add_511_OUT> created at line 1297.
+    Found 16-bit adder for signal <GND_115_o_GND_115_o_add_587_OUT> created at line 1311.
+    Found 16-bit adder for signal <GND_115_o_GND_115_o_add_626_OUT> created at line 1313.
+    Found 11-bit adder for signal <delay[10]_GND_115_o_add_679_OUT> created at line 1328.
+    Found 6-bit adder for signal <idx[5]_GND_115_o_add_825_OUT> created at line 1374.
+    Found 8-bit adder for signal <dctr[7]_GND_115_o_add_848_OUT> created at line 1424.
+    Found 16-bit 32-to-1 multiplexer for signal <GND_115_o_cache0[31][15]_wide_mux_585_OUT> created at line 1311.
+    Found 16-bit 32-to-1 multiplexer for signal <GND_115_o_cache1[31][15]_wide_mux_624_OUT> created at line 1313.
+    Found 16-bit 32-to-1 multiplexer for signal <idx[4]_cache0[31][15]_wide_mux_821_OUT> created at line 1367.
+    Found 16-bit 32-to-1 multiplexer for signal <idx[4]_cache1[31][15]_wide_mux_822_OUT> created at line 1369.
+    Found 5-bit comparator greater for signal <ncr[4]_GND_115_o_LessThan_68_o> created at line 516
+    Found 5-bit comparator greater for signal <ncr[4]_GND_115_o_LessThan_136_o> created at line 647
+    Found 5-bit comparator greater for signal <ncr2[4]_GND_115_o_LessThan_224_o> created at line 790
+    Found 10-bit comparator lessequal for signal <n0193> created at line 1061
+    Found 32-bit comparator greater for signal <GND_115_o_block[31]_LessThan_350_o> created at line 1073
+    Found 11-bit comparator greater for signal <delay[10]_PWR_21_o_LessThan_361_o> created at line 1090
+    Found 32-bit comparator lessequal for signal <n0339> created at line 1280
+    Found 32-bit comparator lessequal for signal <n0556> created at line 1311
+    Found 2-bit comparator equal for signal <n0796> created at line 1391
+    Found 6-bit comparator greater for signal <idx[5]_PWR_21_o_LessThan_839_o> created at line 1404
+    Found 8-bit comparator greater for signal <dctr[7]_GND_115_o_LessThan_848_o> created at line 1422
+    Found 8-bit comparator greater for signal <dctr[7]_GND_115_o_LessThan_851_o> created at line 1427
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred 1313 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred 448 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <spi_host> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 16x8-bit multiplier                                   : 1
+ 19x8-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 89
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 1
+ 16-bit adder                                          : 5
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 6
+ 24-bit adder                                          : 4
+ 24-bit subtractor                                     : 2
+ 25-bit subtractor                                     : 1
+ 27-bit adder                                          : 1
+ 28-bit subtractor                                     : 1
+ 3-bit adder                                           : 6
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 30
+ 4-bit addsub                                          : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 3
+# Registers                                            : 154
+ 1-bit register                                        : 87
+ 10-bit register                                       : 10
+ 11-bit register                                       : 1
+ 13-bit register                                       : 2
+ 16-bit register                                       : 4
+ 2-bit register                                        : 9
+ 24-bit register                                       : 7
+ 3-bit register                                        : 3
+ 32-bit register                                       : 3
+ 4-bit register                                        : 5
+ 5-bit register                                        : 2
+ 512-bit register                                      : 2
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 17
+# Latches                                              : 50
+ 1-bit latch                                           : 50
+# Comparators                                          : 43
+ 1-bit comparator equal                                : 3
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 4
+ 11-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 2
+ 2-bit comparator equal                                : 1
+ 24-bit comparator greater                             : 2
+ 24-bit comparator lessequal                           : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 3
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 3
+ 5-bit comparator greater                              : 3
+ 6-bit comparator greater                              : 1
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 514
+ 1-bit 2-to-1 multiplexer                              : 210
+ 10-bit 2-to-1 multiplexer                             : 15
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 196
+ 16-bit 32-to-1 multiplexer                            : 4
+ 2-bit 2-to-1 multiplexer                              : 6
+ 24-bit 2-to-1 multiplexer                             : 6
+ 24-bit 3-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 7
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 62
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+# FSMs                                                 : 4
+# Xors                                                 : 12
+ 1-bit xor2                                            : 3
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo_vga.ngc>.
+Reading core <ipcore_dir/fifo_8to1.ngc>.
+Loading core <fifo_vga> for timing and area information for instance <WR_16x16>.
+Loading core <fifo_8to1> for timing and area information for instance <ONE_BIT_OUT>.
+Loading core <fifo_vga> for timing and area information for instance <RD_PING>.
+INFO:Xst:2261 - The FF/Latch <rcmd1i_0> in Unit <IS0> is equivalent to the following 2 FFs/Latches, which will be removed : <rcmd1i_4> <rcmd1i_6> 
+INFO:Xst:2261 - The FF/Latch <DQM_0> in Unit <SDRAMIF> is equivalent to the following FF/Latch, which will be removed : <DQM_1> 
+WARNING:Xst:1426 - The value init of the FF/Latch led_control_0 hinder the constant cleaning in the block IS0.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rcmd3_0> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_1> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_2> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_3> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_4> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_5> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_6> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_7> (without init value) has a constant value of 0 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_0> (without init value) has a constant value of 1 in block <IS0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <CS_N> has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <CKE> has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_7> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_5> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <led_control_1> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <led_control_2> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd1i_1> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd1i_2> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd1i_3> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd1i_5> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd1i_7> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <led_control2_0> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd2_0> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd2_1> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd2_2> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd2_3> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd2_4> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd2_5> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_1> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_2> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_3> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_4> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_5> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_6> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd4_7> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd5_2> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd5_4> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <rcmd5_6> of sequential type is unconnected in block <IS0>.
+WARNING:Xst:2677 - Node <RD_MASK_1> of sequential type is unconnected in block <SDRAMIF>.
+WARNING:Xst:2677 - Node <rLED_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <rLED_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2404 -  FFs/Latches <rcmd1i<7:7>> (without init value) have a constant value of 0 in block <spi_host>.
+WARNING:Xst:2404 -  FFs/Latches <RD_MASK<1:1>> (without init value) have a constant value of 0 in block <sdram_top>.
+
+Synthesizing (advanced) Unit <TMDS_encoder>.
+The following registers are absorbed into accumulator <balance_acc>: 1 register on signal <balance_acc>.
+	The following adders/subtractors are grouped into adder tree <Madd_balance_Madd1> :
+ 	<Madd__n0169_Madd> in block <TMDS_encoder>, 	<Madd_n0130[1:0]> in block <TMDS_encoder>, 	<Madd_balance_Madd> in block <TMDS_encoder>.
+	The following adders/subtractors are grouped into adder tree <Madd_Nb1s_Madd1> :
+ 	<Madd__n0160> in block <TMDS_encoder>, 	<Madd__n0161> in block <TMDS_encoder>, 	<Madd__n0163_Madd> in block <TMDS_encoder>, 	<Madd_n0109[1:0]> in block <TMDS_encoder>, 	<Madd_Nb1s_Madd> in block <TMDS_encoder>.
+Unit <TMDS_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <control_interface>.
+The following registers are absorbed into counter <init_timer>: 1 register on signal <init_timer>.
+Unit <control_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hdmi_top>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+The following registers are absorbed into counter <contX>: 1 register on signal <contX>.
+The following registers are absorbed into counter <contY>: 1 register on signal <contY>.
+The following registers are absorbed into counter <TMDS_modulo>: 1 register on signal <TMDS_modulo>.
+Unit <hdmi_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram_top>.
+The following registers are absorbed into accumulator <rWR_ADDR>: 1 register on signal <rWR_ADDR>.
+Unit <sdram_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_host>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+The following registers are absorbed into counter <dctr>: 1 register on signal <dctr>.
+The following registers are absorbed into counter <block>: 1 register on signal <block>.
+The following registers are absorbed into counter <delay>: 1 register on signal <delay>.
+Unit <spi_host> synthesized (advanced).
+WARNING:Xst:2677 - Node <led_control_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <led_control_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <led_control2_0> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_0> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_6> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_7> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_6> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rLED_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <rLED_2> of sequential type is unconnected in block <top>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 16x8-bit multiplier                                   : 1
+ 19x8-bit multiplier                                   : 2
+# Adders/Subtractors                                   : 37
+ 10-bit adder                                          : 4
+ 10-bit subtractor                                     : 1
+ 16-bit adder                                          : 4
+ 16-bit subtractor                                     : 1
+ 24-bit adder                                          : 4
+ 24-bit subtractor                                     : 2
+ 25-bit subtractor                                     : 1
+ 28-bit subtractor                                     : 1
+ 4-bit adder carry in                                  : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 2
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 2
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 2
+# Adder Trees                                          : 6
+ 4-bit / 4-inputs adder tree                           : 3
+ 4-bit / 6-inputs adder tree                           : 3
+# Counters                                             : 9
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 4
+ 24-bit up accumulator                                 : 1
+ 4-bit updown accumulator                              : 3
+# Registers                                            : 1589
+ Flip-Flops                                            : 1589
+# Comparators                                          : 43
+ 1-bit comparator equal                                : 3
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 4
+ 11-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 2
+ 2-bit comparator equal                                : 1
+ 24-bit comparator greater                             : 2
+ 24-bit comparator lessequal                           : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 3
+ 32-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 3
+ 5-bit comparator greater                              : 3
+ 6-bit comparator greater                              : 1
+ 7-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 513
+ 1-bit 2-to-1 multiplexer                              : 210
+ 10-bit 2-to-1 multiplexer                             : 15
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 196
+ 16-bit 32-to-1 multiplexer                            : 4
+ 2-bit 2-to-1 multiplexer                              : 6
+ 24-bit 2-to-1 multiplexer                             : 6
+ 24-bit 3-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 7
+ 6-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 61
+# FSMs                                                 : 4
+# Xors                                                 : 12
+ 1-bit xor2                                            : 3
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch led_control_0 hinder the constant cleaning in the block spi_host.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rcmd3_0> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_1> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_2> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_3> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_4> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_5> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_6> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_7> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_0> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_4> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_6> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_5> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DQM_0> in Unit <sdram_top> is equivalent to the following FF/Latch, which will be removed : <DQM_1> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <delay_st[1:4]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 11    | 0001
+ 00    | 0010
+ 01    | 0100
+ 10    | 1000
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <IS0/FSM_3> on signal <stt[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SDRAMIF/FSM_1> on signal <WR_MASK[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 11    | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SDRAMIF/u_command/FSM_2> on signal <rw_shift[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+WARNING:Xst:1710 - FF/Latch <rcmd1_6> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1_7> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd6_0> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd6_2> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <header_0_16> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_17> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_18> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_19> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_20> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_21> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_22> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <header_0_23> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:1710 - FF/Latch <mLENGTH_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cntr_30> of sequential type is unconnected in block <hdmi_top>.
+WARNING:Xst:2677 - Node <cntr_31> of sequential type is unconnected in block <hdmi_top>.
+WARNING:Xst:1710 - FF/Latch <minADDR_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <minADDR_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance pll_base_inst in unit pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <rcmd6_5> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd6_6> 
+INFO:Xst:2261 - The FF/Latch <rcmd4_0> in Unit <spi_host> is equivalent to the following 4 FFs/Latches, which will be removed : <rcmd5_1> <rcmd5_3> <rcmd5_5> <rcmd5_7> 
+INFO:Xst:2261 - The FF/Latch <rcmd1_0> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd1_5> 
+INFO:Xst:2261 - The FF/Latch <rcmd1_1> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd1_2> 
+INFO:Xst:2261 - The FF/Latch <rcmd2_7> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd5_0> 
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_ADDR_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/rRD1_MAX_ADDR_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/mADDR_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/mADDR_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/mADDR_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/mADDR_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/mADDR_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    SDRAMIF/rRD1_ADDR_23 in unit <top>
+    SDRAMIF/rRD1_ADDR_22 in unit <top>
+    SDRAMIF/rRD1_ADDR_21 in unit <top>
+    SDRAMIF/rRD1_ADDR_18 in unit <top>
+    SDRAMIF/rRD1_ADDR_20 in unit <top>
+    SDRAMIF/rRD1_ADDR_19 in unit <top>
+    SDRAMIF/rRD1_ADDR_15 in unit <top>
+    SDRAMIF/rRD1_ADDR_17 in unit <top>
+    SDRAMIF/rRD1_ADDR_16 in unit <top>
+    SDRAMIF/rRD1_ADDR_12 in unit <top>
+    SDRAMIF/rRD1_ADDR_14 in unit <top>
+    SDRAMIF/rRD1_ADDR_13 in unit <top>
+
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    state_0 in unit <spi_host>
+
+WARNING:Xst:2016 - Found a loop when searching source clock on port 'clk_sdram_INV_1_o:clk_sdram_INV_1_o'
+Last warning will be issued only once.
+
+Optimizing unit <pll> ...
+
+Optimizing unit <top> ...
+
+Optimizing unit <spi_host> ...
+
+Optimizing unit <control_interface> ...
+
+Optimizing unit <command> ...
+
+Optimizing unit <hdmi_top> ...
+
+Optimizing unit <TMDS_encoder> ...
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/CKE> has a constant value of 1 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/CS_N> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_0> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <SDRAMIF/PM_DONE> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <IS0/start> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <SDRAMIF/u_control_interface/NOP> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_29> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_28> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_27> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_26> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_25> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_24> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_23> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_22> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_21> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_20> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_19> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_18> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_17> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_16> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_15> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_14> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <HDMI_PORT2/cntr_0> of sequential type is unconnected in block <top>.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/init_timer_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/RD_MASK> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/mRD> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/WR_MASK_FSM_FFd1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/mWR> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 29.
+WARNING:Xst:1426 - The value init of the FF/Latch IS0/state_0_LD hinder the constant cleaning in the block top.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/WR_16x16> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/RD_PING> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/WR_16x16> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/RD_PING> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/ONE_BIT_OUT> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1665
+ Flip-Flops                                            : 1665
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4437
+#      GND                         : 4
+#      INV                         : 114
+#      LUT1                        : 159
+#      LUT2                        : 228
+#      LUT3                        : 210
+#      LUT4                        : 781
+#      LUT5                        : 298
+#      LUT6                        : 1887
+#      MUXCY                       : 364
+#      MUXF7                       : 72
+#      VCC                         : 4
+#      XORCY                       : 316
+# FlipFlops/Latches                : 2084
+#      FD                          : 263
+#      FD_1                        : 7
+#      FDC                         : 236
+#      FDC_1                       : 7
+#      FDCE                        : 91
+#      FDCE_1                      : 12
+#      FDE                         : 147
+#      FDE_1                       : 1106
+#      FDP                         : 52
+#      FDP_1                       : 1
+#      FDPE                        : 11
+#      FDR                         : 61
+#      FDR_1                       : 8
+#      FDRE                        : 29
+#      FDS                         : 3
+#      LD                          : 37
+#      LDC                         : 12
+#      ODDR2                       : 1
+# RAMS                             : 3
+#      RAMB8BWER                   : 3
+# Clock Buffers                    : 8
+#      BUFG                        : 8
+# IO Buffers                       : 60
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 36
+#      OBUFDS                      : 4
+# DSPs                             : 3
+#      DSP48A1                     : 3
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2084  out of  30064     6%  
+ Number of Slice LUTs:                 3677  out of  15032    24%  
+    Number used as Logic:              3677  out of  15032    24%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4067
+   Number with an unused Flip Flop:    1983  out of   4067    48%  
+   Number with an unused LUT:           390  out of   4067     9%  
+   Number of fully used LUT-FF pairs:  1694  out of   4067    41%  
+   Number of unique control sets:       122
+
+IO Utilization: 
+ Number of IOs:                          64
+ Number of bonded IOBs:                  64  out of    186    34%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     52     3%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+ Number of DSP48A1s:                      3  out of     38     7%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                       | Clock buffer(FF name)                                                                                         | Load  |
+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------+
+PLL0/pll_base_inst/CLKOUT3                                                         | BUFG                                                                                                          | 1     |
+PLL0/pll_base_inst/CLKOUT0                                                         | BUFG                                                                                                          | 473   |
+HDMI_PORT2/syncV                                                                   | NONE(sgnl)                                                                                                    | 16    |
+PLL0/pll_base_inst/CLKOUT1                                                         | BUFG                                                                                                          | 2     |
+SDRAMIF/rst_sync                                                                   | NONE(SDRAMIF/rRD1_MAX_ADDR_12)                                                                                | 36    |
+IS0/cntr_2                                                                         | BUFG                                                                                                          | 1170  |
+PLL0/pll_base_inst/CLKOUT4                                                         | BUFG                                                                                                          | 36    |
+IS0/cntr_6                                                                         | NONE(IS0/dctr_7)                                                                                              | 55    |
+clock_25m                                                                          | BUFG                                                                                                          | 189   |
+PLL0/pll_base_inst/CLKOUT2                                                         | BUFG                                                                                                          | 35    |
+IS0/WR_CLK                                                                         | NONE(SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i)| 65    |
+SDRAMIF/rst_sync_RD1_ADDR[13]_AND_439_o(SDRAMIF/rst_sync_RD1_ADDR[13]_AND_439_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_13_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[14]_AND_437_o(SDRAMIF/rst_sync_RD1_ADDR[14]_AND_437_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_14_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[12]_AND_441_o(SDRAMIF/rst_sync_RD1_ADDR[12]_AND_441_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_12_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[16]_AND_433_o(SDRAMIF/rst_sync_RD1_ADDR[16]_AND_433_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_16_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[17]_AND_431_o(SDRAMIF/rst_sync_RD1_ADDR[17]_AND_431_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_17_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[15]_AND_435_o(SDRAMIF/rst_sync_RD1_ADDR[15]_AND_435_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_15_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[19]_AND_427_o(SDRAMIF/rst_sync_RD1_ADDR[19]_AND_427_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_19_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[20]_AND_425_o(SDRAMIF/rst_sync_RD1_ADDR[20]_AND_425_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_20_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[18]_AND_429_o(SDRAMIF/rst_sync_RD1_ADDR[18]_AND_429_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_18_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[21]_AND_423_o(SDRAMIF/rst_sync_RD1_ADDR[21]_AND_423_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_21_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[22]_AND_421_o(SDRAMIF/rst_sync_RD1_ADDR[22]_AND_421_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_22_LDC)                                                                             | 1     |
+SDRAMIF/rst_sync_RD1_ADDR[23]_AND_419_o(SDRAMIF/rst_sync_RD1_ADDR[23]_AND_419_o1:O)| NONE(*)(SDRAMIF/rRD1_ADDR_23_LDC)                                                                             | 1     |
+IS0/reset                                                                          | NONE(IS0/state_0_LD)                                                                                          | 1     |
+-----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+-------+
+(*) These 12 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 22.336ns (Maximum Frequency: 44.771MHz)
+   Minimum input arrival time before clock: 5.914ns
+   Maximum output required time after clock: 5.976ns
+   Maximum combinational path delay: 6.670ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL0/pll_base_inst/CLKOUT3'
+  Clock period: 1.493ns (frequency: 669.680MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.493ns (Levels of Logic = 0)
+  Source:            clock_25m (FF)
+  Destination:       clock_25m (FF)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT3 rising
+  Destination Clock: PLL0/pll_base_inst/CLKOUT3 rising
+
+  Data Path: clock_25m to clock_25m
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  clock_25m (clock_25m)
+     FDR:R                     0.430          clock_25m
+    ----------------------------------------
+    Total                      1.493ns (0.877ns logic, 0.616ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'HDMI_PORT2/syncV'
+  Clock period: 4.300ns (frequency: 232.542MHz)
+  Total number of paths / destination ports: 347 / 15
+-------------------------------------------------------------------------
+Delay:               4.300ns (Levels of Logic = 8)
+  Source:            minADDR_12 (FF)
+  Destination:       minADDR_12 (FF)
+  Source Clock:      HDMI_PORT2/syncV rising
+  Destination Clock: HDMI_PORT2/syncV rising
+
+  Data Path: minADDR_12 to minADDR_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           7   0.447   1.002  minADDR_12 (minADDR_12)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_lut<6> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_lut<6>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<6> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<7> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<8> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<9> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<9>)
+     MUXCY:CI->O           1   0.213   0.684  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<10> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<10>)
+     LUT6:I4->O           12   0.203   1.013  Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<11> (Mcompar_GND_1_o_GND_1_o_LessThan_31_o_cy<11>)
+     LUT2:I0->O            1   0.203   0.000  Mmux_GND_1_o_minADDR[23]_mux_32_OUT161 (GND_1_o_minADDR[23]_mux_32_OUT<23>)
+     FDCE_1:D                  0.102          minADDR_23
+    ----------------------------------------
+    Total                      4.300ns (1.602ns logic, 2.698ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL0/pll_base_inst/CLKOUT0'
+  Clock period: 7.962ns (frequency: 125.595MHz)
+  Total number of paths / destination ports: 11694 / 845
+-------------------------------------------------------------------------
+Delay:               7.962ns (Levels of Logic = 5)
+  Source:            SDRAMIF/ST_3 (FF)
+  Destination:       SDRAMIF/mLENGTH_6 (FF)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT0 rising
+  Destination Clock: PLL0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: SDRAMIF/ST_3 to SDRAMIF/mLENGTH_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.118  SDRAMIF/ST_3 (SDRAMIF/ST_3)
+     LUT5:I0->O           22   0.203   1.381  SDRAMIF/_n056421 (SDRAMIF/_n05642)
+     LUT6:I2->O            7   0.203   1.002  SDRAMIF/ST[9]_CMD[1]_select_53_OUT<1>31 (SDRAMIF/ST[9]_CMD[1]_select_53_OUT<1>3)
+     LUT3:I0->O            2   0.205   0.981  SDRAMIF/_n0619_inv31 (SDRAMIF/_n0619_inv3)
+     LUT6:I0->O            1   0.203   0.580  SDRAMIF/_n05931 (SDRAMIF/_n0593)
+     LUT5:I4->O           21   0.205   1.113  SDRAMIF/_n0619_inv1 (SDRAMIF/_n0619_inv)
+     FDE:CE                    0.322          SDRAMIF/mADDR_5
+    ----------------------------------------
+    Total                      7.962ns (1.788ns logic, 6.174ns route)
+                                       (22.5% logic, 77.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'IS0/cntr_2'
+  Clock period: 17.929ns (frequency: 55.775MHz)
+  Total number of paths / destination ports: 144115 / 2314
+-------------------------------------------------------------------------
+Delay:               8.965ns (Levels of Logic = 8)
+  Source:            IS0/s2_1 (FF)
+  Destination:       IS0/rcvb2_6 (FF)
+  Source Clock:      IS0/cntr_2 falling
+  Destination Clock: IS0/cntr_2 rising
+
+  Data Path: IS0/s2_1 to IS0/rcvb2_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q           56   0.447   1.816  IS0/s2_1 (IS0/s2_1)
+     LUT3:I0->O           11   0.205   0.883  IS0/s2[7]_PWR_21_o_Select_792_o31 (IS0/s2[7]_PWR_21_o_Select_792_o3)
+     LUT6:I5->O            5   0.205   0.715  IS0/s2[7]_GND_115_o_equal_681_o<7>1 (IS0/s2[7]_GND_115_o_equal_681_o)
+     LUT4:I3->O            2   0.205   0.617  IS0/out121 (IS0/out12)
+     LUT6:I5->O            9   0.205   0.830  IS0/out1 (IS0/n0250)
+     LUT6:I5->O            3   0.205   0.651  IS0/_n4293 (IS0/_n4293)
+     LUT4:I3->O            4   0.205   0.684  IS0/s2[7]_rcvb2[7]_select_401_OUT<0>1114 (IS0/s2[7]_rcvb2[7]_select_401_OUT<0>111)
+     LUT6:I5->O            1   0.205   0.580  IS0/s2[7]_rcvb2[7]_select_401_OUT<5>_SW0 (N26)
+     LUT6:I5->O            1   0.205   0.000  IS0/s2[7]_rcvb2[7]_select_401_OUT<5> (IS0/s2[7]_rcvb2[7]_select_401_OUT<5>)
+     FD:D                      0.102          IS0/rcvb2_5
+    ----------------------------------------
+    Total                      8.965ns (2.189ns logic, 6.776ns route)
+                                       (24.4% logic, 75.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL0/pll_base_inst/CLKOUT4'
+  Clock period: 5.383ns (frequency: 185.762MHz)
+  Total number of paths / destination ports: 829 / 58
+-------------------------------------------------------------------------
+Delay:               5.383ns (Levels of Logic = 4)
+  Source:            IS0/idx_1 (FF)
+  Destination:       IS0/data_15 (FF)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT4 rising
+  Destination Clock: PLL0/pll_base_inst/CLKOUT4 rising
+
+  Data Path: IS0/idx_1 to IS0/data_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q            260   0.447   2.432  IS0/idx_1 (IS0/idx_1)
+     LUT6:I0->O            1   0.203   0.827  IS0/Mmux_idx[4]_cache1[31][15]_wide_mux_822_OUT_81 (IS0/Mmux_idx[4]_cache1[31][15]_wide_mux_822_OUT_81)
+     LUT6:I2->O            1   0.203   0.000  IS0/Mmux_idx[4]_cache1[31][15]_wide_mux_822_OUT_3 (IS0/Mmux_idx[4]_cache1[31][15]_wide_mux_822_OUT_3)
+     MUXF7:I1->O           1   0.140   0.827  IS0/Mmux_idx[4]_cache1[31][15]_wide_mux_822_OUT_2_f7 (IS0/idx[4]_cache1[31][15]_wide_mux_822_OUT<0>)
+     LUT4:I0->O            1   0.203   0.000  IS0/Mmux_idx[4]_idx[4]_mux_823_OUT17 (IS0/idx[4]_idx[4]_mux_823_OUT<0>)
+     FDE:D                     0.102          IS0/data_0
+    ----------------------------------------
+    Total                      5.383ns (1.298ns logic, 4.085ns route)
+                                       (24.1% logic, 75.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'IS0/cntr_6'
+  Clock period: 15.766ns (frequency: 63.428MHz)
+  Total number of paths / destination ports: 3442 / 88
+-------------------------------------------------------------------------
+Delay:               7.883ns (Levels of Logic = 6)
+  Source:            IS0/state_0_C_0 (FF)
+  Destination:       IS0/rcvb_4 (FF)
+  Source Clock:      IS0/cntr_6 falling
+  Destination Clock: IS0/cntr_6 rising
+
+  Data Path: IS0/state_0_C_0 to IS0/rcvb_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            14   0.447   1.062  IS0/state_0_C_0 (IS0/state_0_C_0)
+     LUT3:I1->O           43   0.203   1.793  IS0/state_01 (IS0/state_0)
+     LUT6:I1->O            4   0.203   1.028  IS0/state[7]_GND_115_o_equal_165_o<7>1 (IS0/state[7]_GND_115_o_equal_165_o)
+     LUT6:I1->O            3   0.203   0.651  IS0/state[7]_rcvb[7]_select_174_OUT<2>1111 (IS0/state[7]_rcvb[7]_select_174_OUT<2>111)
+     LUT5:I4->O            2   0.205   0.617  IS0/state[7]_rcvb[7]_select_174_OUT<0>1111 (IS0/state[7]_rcvb[7]_select_174_OUT<0>111)
+     LUT4:I3->O            2   0.205   0.961  IS0/state[7]_rcvb[7]_select_174_OUT<1>111 (IS0/state[7]_rcvb[7]_select_174_OUT<1>11)
+     LUT6:I1->O            1   0.203   0.000  IS0/state[7]_rcvb[7]_select_174_OUT<1>1 (IS0/state[7]_rcvb[7]_select_174_OUT<1>)
+     FD:D                      0.102          IS0/rcvb_1
+    ----------------------------------------
+    Total                      7.883ns (1.771ns logic, 6.112ns route)
+                                       (22.5% logic, 77.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_25m'
+  Clock period: 22.336ns (frequency: 44.771MHz)
+  Total number of paths / destination ports: 107556 / 377
+-------------------------------------------------------------------------
+Delay:               11.168ns (Levels of Logic = 9)
+  Source:            SDRAMIF/ONE_BIT_OUT/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram (RAM)
+  Destination:       HDMI_PORT2/iRED/balance_acc_3 (FF)
+  Source Clock:      clock_25m falling
+  Destination Clock: clock_25m rising
+
+  Data Path: SDRAMIF/ONE_BIT_OUT/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram to HDMI_PORT2/iRED/balance_acc_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO0   36   1.850   1.349  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM9.ram (dout<0>)
+     end scope: 'SDRAMIF/ONE_BIT_OUT:dout<0>'
+     LUT6:I5->O           25   0.205   1.193  Mmux_wRED11 (wRED<0>)
+     LUT3:I2->O            1   0.205   0.580  HDMI_PORT2/iRED/XNOR5_SW1 (N420)
+     LUT6:I5->O            6   0.205   0.973  HDMI_PORT2/iRED/XNOR5 (HDMI_PORT2/iRED/XNOR5)
+     LUT6:I3->O           19   0.205   1.072  HDMI_PORT2/iRED/ADDERTREE_INTERNAL_Madd5_cy<1>11 (HDMI_PORT2/iRED/ADDERTREE_INTERNAL_Madd5_cy<1>)
+     LUT6:I5->O            1   0.205   0.580  HDMI_PORT2/iRED/GND_8_o_GND_8_o_OR_38_o3 (HDMI_PORT2/iRED/GND_8_o_GND_8_o_OR_38_o3)
+     LUT5:I4->O           16   0.205   1.005  HDMI_PORT2/iRED/GND_8_o_GND_8_o_OR_38_o4 (HDMI_PORT2/iRED/GND_8_o_GND_8_o_OR_38_o)
+     LUT6:I5->O            1   0.205   0.827  HDMI_PORT2/iRED/Maccum_balance_acc_xor<1>111 (HDMI_PORT2/iRED/Maccum_balance_acc_xor<1>11)
+     LUT6:I2->O            1   0.203   0.000  HDMI_PORT2/iRED/Maccum_balance_acc_xor<3>11 (HDMI_PORT2/iRED/Result<3>)
+     FDR:D                     0.102          HDMI_PORT2/iRED/balance_acc_3
+    ----------------------------------------
+    Total                     11.168ns (3.590ns logic, 7.578ns route)
+                                       (32.1% logic, 67.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL0/pll_base_inst/CLKOUT2'
+  Clock period: 2.675ns (frequency: 373.797MHz)
+  Total number of paths / destination ports: 87 / 39
+-------------------------------------------------------------------------
+Delay:               2.675ns (Levels of Logic = 1)
+  Source:            HDMI_PORT2/TMDS_modulo_2 (FF)
+  Destination:       HDMI_PORT2/TMDS_modulo_3 (FF)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT2 rising
+  Destination Clock: PLL0/pll_base_inst/CLKOUT2 rising
+
+  Data Path: HDMI_PORT2/TMDS_modulo_2 to HDMI_PORT2/TMDS_modulo_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.879  HDMI_PORT2/TMDS_modulo_2 (HDMI_PORT2/TMDS_modulo_2)
+     LUT4:I1->O            5   0.205   0.714  HDMI_PORT2/GND_7_o_GND_7_o_equal_37_o<3>1 (HDMI_PORT2/GND_7_o_GND_7_o_equal_37_o)
+     FDR:R                     0.430          HDMI_PORT2/TMDS_modulo_0
+    ----------------------------------------
+    Total                      2.675ns (1.082ns logic, 1.593ns route)
+                                       (40.4% logic, 59.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'IS0/WR_CLK'
+  Clock period: 3.384ns (frequency: 295.526MHz)
+  Total number of paths / destination ports: 334 / 141
+-------------------------------------------------------------------------
+Delay:               3.384ns (Levels of Logic = 3)
+  Source:            SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1 (FF)
+  Destination:       SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      IS0/WR_CLK rising
+  Destination Clock: IS0/WR_CLK rising
+
+  Data Path: SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1 to SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            14   0.447   0.958  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count<1>)
+     LUT5:I4->O            1   0.205   0.580  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_11_o14 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_11_o13)
+     LUT3:I2->O            1   0.205   0.684  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_11_o15 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_11_o14)
+     LUT6:I4->O            2   0.203   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_11_o18 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_190_o_MUX_11_o)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      3.384ns (1.162ns logic, 2.222ns route)
+                                       (34.3% logic, 65.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'HDMI_PORT2/syncV'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              3.521ns (Levels of Logic = 2)
+  Source:            SYNC_OUTPUT1 (PAD)
+  Destination:       switch (FF)
+  Destination Clock: HDMI_PORT2/syncV falling
+
+  Data Path: SYNC_OUTPUT1 to switch
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  SYNC_OUTPUT1_IBUF (LED_6_OBUF)
+     INV:I->O             15   0.206   0.981  LED<6>_inv1_INV_0 (LED<6>_inv)
+     FDC:CLR                   0.430          switch
+    ----------------------------------------
+    Total                      3.521ns (1.858ns logic, 1.663ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL0/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            DQ<15> (PAD)
+  Destination:       SDRAMIF/mDATAOUT_15 (FF)
+  Destination Clock: PLL0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: DQ<15> to SDRAMIF/mDATAOUT_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.222   0.579  DQ_15_IOBUF (N210)
+     FD:D                      0.102          SDRAMIF/mDATAOUT_15
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'IS0/cntr_2'
+  Total number of paths / destination ports: 20 / 13
+-------------------------------------------------------------------------
+Offset:              5.914ns (Levels of Logic = 5)
+  Source:            MISO (PAD)
+  Destination:       IS0/n2_3 (FF)
+  Destination Clock: IS0/cntr_2 rising
+
+  Data Path: MISO to IS0/n2_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.520  MISO_IBUF (MISO_IBUF)
+     LUT5:I2->O            1   0.205   0.827  IS0/s2[7]_GND_115_o_select_400_OUT<3>2_SW1 (N564)
+     LUT6:I2->O            2   0.203   0.845  IS0/s2[7]_GND_115_o_select_400_OUT<3>2 (IS0/s2[7]_GND_115_o_select_400_OUT<3>2)
+     LUT6:I3->O            1   0.205   0.580  IS0/s2[7]_GND_115_o_select_400_OUT<3>6_SW0 (N580)
+     LUT6:I5->O            1   0.205   0.000  IS0/s2[7]_GND_115_o_select_400_OUT<3>6 (IS0/s2[7]_GND_115_o_select_400_OUT<3>)
+     FD:D                      0.102          IS0/n2_3
+    ----------------------------------------
+    Total                      5.914ns (2.142ns logic, 3.772ns route)
+                                       (36.2% logic, 63.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'IS0/cntr_6'
+  Total number of paths / destination ports: 16 / 13
+-------------------------------------------------------------------------
+Offset:              5.075ns (Levels of Logic = 4)
+  Source:            MISO (PAD)
+  Destination:       IS0/nxt_2 (FF)
+  Destination Clock: IS0/cntr_6 rising
+
+  Data Path: MISO to IS0/nxt_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   1.222   1.636  MISO_IBUF (MISO_IBUF)
+     LUT5:I0->O            1   0.203   0.924  IS0/state[7]_GND_115_o_select_173_OUT<6>3 (IS0/state[7]_GND_115_o_select_173_OUT<6>4)
+     LUT6:I1->O            1   0.203   0.580  IS0/state[7]_GND_115_o_select_173_OUT<6>5 (IS0/state[7]_GND_115_o_select_173_OUT<6>6)
+     LUT5:I4->O            1   0.205   0.000  IS0/state[7]_GND_115_o_select_173_OUT<6>7 (IS0/state[7]_GND_115_o_select_173_OUT<2>)
+     FD:D                      0.102          IS0/nxt_2
+    ----------------------------------------
+    Total                      5.075ns (1.935ns logic, 3.140ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL0/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            HDMI_PORT2/TMDS_shift_red_0 (FF)
+  Destination:       TMDS_POSITIVE<2> (PAD)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT2 rising
+
+  Data Path: HDMI_PORT2/TMDS_shift_red_0 to TMDS_POSITIVE<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  HDMI_PORT2/TMDS_shift_red_0 (HDMI_PORT2/TMDS_shift_red_0)
+     OBUFDS:I->O               2.571          HDMI_PORT2/mRED (TMDS_POSITIVE<2>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL0/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 53 / 37
+-------------------------------------------------------------------------
+Offset:              5.000ns (Levels of Logic = 2)
+  Source:            SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       DQ<15> (PAD)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to DQ<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO11    1   1.850   0.579  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (dout<15>)
+     end scope: 'SDRAMIF/WR_16x16:dout<15>'
+     IOBUF:I->IO               2.571          DQ_15_IOBUF (DQ<15>)
+    ----------------------------------------
+    Total                      5.000ns (4.421ns logic, 0.579ns route)
+                                       (88.4% logic, 11.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_25m'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.625ns (Levels of Logic = 2)
+  Source:            HDMI_PORT2/syncV (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      clock_25m rising
+
+  Data Path: HDMI_PORT2/syncV to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.788  HDMI_PORT2/syncV (HDMI_PORT2/syncV)
+     LUT2:I0->O            2   0.203   0.616  Mmux_n008711 (SYNC_INPUT1_OBUF)
+     OBUF:I->O                 2.571          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      4.625ns (3.221ns logic, 1.404ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'HDMI_PORT2/syncV'
+  Total number of paths / destination ports: 26 / 4
+-------------------------------------------------------------------------
+Offset:              5.976ns (Levels of Logic = 3)
+  Source:            minADDR_22 (FF)
+  Destination:       LED<2> (PAD)
+  Source Clock:      HDMI_PORT2/syncV rising
+
+  Data Path: minADDR_22 to LED<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           6   0.447   1.109  minADDR_22 (minADDR_22)
+     LUT6:I0->O            1   0.203   0.827  Mmux_SYNC_INPUT211 (Mmux_SYNC_INPUT21)
+     LUT4:I0->O            2   0.203   0.616  Mmux_SYNC_INPUT213 (SYNC_INPUT2_OBUF)
+     OBUF:I->O                 2.571          LED_2_OBUF (LED<2>)
+    ----------------------------------------
+    Total                      5.976ns (3.424ns logic, 2.552ns route)
+                                       (57.3% logic, 42.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'IS0/cntr_6'
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Offset:              4.832ns (Levels of Logic = 2)
+  Source:            IS0/clk_sel (FF)
+  Destination:       SCK (PAD)
+  Source Clock:      IS0/cntr_6 falling
+
+  Data Path: IS0/clk_sel to SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             8   0.447   1.031  IS0/clk_sel (IS0/clk_sel)
+     LUT3:I0->O            1   0.205   0.579  IS0/Mmux_cs11 (CS_OBUF)
+     OBUF:I->O                 2.571          CS_OBUF (CS)
+    ----------------------------------------
+    Total                      4.832ns (3.223ns logic, 1.609ns route)
+                                       (66.7% logic, 33.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'IS0/cntr_2'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.453ns (Levels of Logic = 2)
+  Source:            IS0/cs2 (FF)
+  Destination:       CS (PAD)
+  Source Clock:      IS0/cntr_2 falling
+
+  Data Path: IS0/cs2 to CS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             3   0.447   0.651  IS0/cs2 (IS0/cs2)
+     LUT3:I2->O            1   0.205   0.579  IS0/Mmux_cs11 (CS_OBUF)
+     OBUF:I->O                 2.571          CS_OBUF (CS)
+    ----------------------------------------
+    Total                      4.453ns (3.223ns logic, 1.230ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL0/pll_base_inst/CLKOUT3'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            clock_25m (FF)
+  Destination:       TMDS_CLOCK_P (PAD)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT3 rising
+
+  Data Path: clock_25m to TMDS_CLOCK_P
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  clock_25m (clock_25m)
+     OBUFDS:I->O               2.571          HDMI_PORT2/mCLOCK (TMDS_CLOCK_P)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL0/pll_base_inst/CLKOUT4'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              5.452ns (Levels of Logic = 2)
+  Source:            IS0/cntr_6 (FF)
+  Destination:       SCK (PAD)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT4 rising
+
+  Data Path: IS0/cntr_6 to SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              50   0.447   1.652  IS0/cntr_6 (IS0/cntr_6)
+     LUT3:I1->O            1   0.203   0.579  IS0/Mmux_sck11 (SCK_OBUF)
+     OBUF:I->O                 2.571          SCK_OBUF (SCK)
+    ----------------------------------------
+    Total                      5.452ns (3.221ns logic, 2.231ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               6.670ns (Levels of Logic = 4)
+  Source:            SYNC_OUTPUT1 (PAD)
+  Destination:       LED<2> (PAD)
+
+  Data Path: SYNC_OUTPUT1 to LED<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   1.028  SYNC_OUTPUT1_IBUF (LED_6_OBUF)
+     LUT6:I1->O            1   0.203   0.827  Mmux_SYNC_INPUT211 (Mmux_SYNC_INPUT21)
+     LUT4:I0->O            2   0.203   0.616  Mmux_SYNC_INPUT213 (SYNC_INPUT2_OBUF)
+     OBUF:I->O                 2.571          LED_2_OBUF (LED<2>)
+    ----------------------------------------
+    Total                      6.670ns (4.199ns logic, 2.471ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock HDMI_PORT2/syncV
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |    4.300|         |    1.507|         |
+PLL0/pll_base_inst/CLKOUT0|    5.392|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IS0/WR_CLK
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+IS0/WR_CLK                |    3.384|         |         |         |
+PLL0/pll_base_inst/CLKOUT0|    4.420|         |         |         |
+PLL0/pll_base_inst/CLKOUT4|    1.326|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IS0/cntr_2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IS0/cntr_2     |    6.179|    8.965|    8.624|         |
+IS0/cntr_6     |         |         |    2.686|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IS0/cntr_6
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+IS0/cntr_6     |    6.513|    7.883|    7.544|         |
+IS0/reset      |         |    8.060|    7.721|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL0/pll_base_inst/CLKOUT0
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV                       |    2.574|         |         |         |
+IS0/WR_CLK                             |    1.128|         |         |         |
+IS0/cntr_2                             |   15.199|         |         |         |
+PLL0/pll_base_inst/CLKOUT0             |    7.962|         |         |         |
+PLL0/pll_base_inst/CLKOUT4             |    4.113|         |         |         |
+SDRAMIF/rst_sync                       |         |    6.633|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[12]_AND_441_o|         |    5.494|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[13]_AND_439_o|         |    5.484|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[14]_AND_437_o|         |    5.475|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[15]_AND_435_o|         |    5.465|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[16]_AND_433_o|         |    5.456|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[17]_AND_431_o|         |    5.446|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[18]_AND_429_o|         |    5.437|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[19]_AND_427_o|         |    5.427|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[20]_AND_425_o|         |    5.418|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[21]_AND_423_o|         |    5.408|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[22]_AND_421_o|         |    4.348|         |         |
+SDRAMIF/rst_sync_RD1_ADDR[23]_AND_419_o|         |    4.108|         |         |
+clock_25m                              |    1.232|    1.128|         |         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL0/pll_base_inst/CLKOUT2
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+PLL0/pll_base_inst/CLKOUT2|    2.675|         |         |         |
+clock_25m                 |    1.334|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL0/pll_base_inst/CLKOUT3
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+PLL0/pll_base_inst/CLKOUT3|    1.493|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL0/pll_base_inst/CLKOUT4
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+IS0/cntr_2                |         |    3.850|         |         |
+PLL0/pll_base_inst/CLKOUT4|    5.383|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.005|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    1.100|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[12]_AND_441_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[13]_AND_439_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[14]_AND_437_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[15]_AND_435_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[16]_AND_433_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[17]_AND_431_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[18]_AND_429_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[19]_AND_427_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[20]_AND_425_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[21]_AND_423_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.574|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[22]_AND_421_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.545|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SDRAMIF/rst_sync_RD1_ADDR[23]_AND_419_o
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |         |    2.545|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    3.444|         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_25m
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+HDMI_PORT2/syncV          |         |   10.275|         |         |
+IS0/cntr_2                |   10.753|         |    5.080|         |
+PLL0/pll_base_inst/CLKOUT0|         |         |    2.622|         |
+clock_25m                 |    5.462|   11.168|    3.849|         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 83.00 secs
+Total CPU time to Xst completion: 82.86 secs
+ 
+--> 
+
+Total memory usage is 351820 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  294 (   0 filtered)
+Number of infos    :   48 (   0 filtered)
+

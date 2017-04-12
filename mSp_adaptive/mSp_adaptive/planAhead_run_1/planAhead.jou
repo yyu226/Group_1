@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Start of session at: Mon Nov 14 10:51:43 2016
+# Process ID: 5812
+# Log file: C:/Users/yingyu/Desktop/ISEproj/mSp_adaptive/mSp_adaptive/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/yingyu/Desktop/ISEproj/mSp_adaptive/mSp_adaptive/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/yingyu/Desktop/ISEproj/mSp_adaptive/mSp_adaptive/pa.fromNetlist.tcl
+exit
+stop_gui

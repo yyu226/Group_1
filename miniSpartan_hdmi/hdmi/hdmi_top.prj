@@ -1,0 +1,4 @@
+verilog work "ipcore_dir/pll.v"
+verilog work "ipcore_dir/pll/example_design/pll_exdes.v"
+verilog work "TDMS_encoder.v"
+verilog work "hdmi_top.v"

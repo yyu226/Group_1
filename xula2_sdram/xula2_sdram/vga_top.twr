@@ -1,0 +1,145 @@
+--------------------------------------------------------------------------------
+Release 13.3 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.3\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml vga_top.twx vga_top.ncd -o vga_top.twr vga_top.pcf -ucf
+vga_top.ucf
+
+Design file:              vga_top.ncd
+Physical constraint file: vga_top.pcf
+Device,package,speed:     xc6slx9,ftg256,C,-3 (PRODUCTION 1.20 2011-10-03)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLOCK_12
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+DQ<0>       |   -1.310(R)|      FAST  |    3.982(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<1>       |   -1.339(R)|      FAST  |    4.033(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<2>       |   -1.300(R)|      FAST  |    3.990(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<3>       |   -1.286(R)|      FAST  |    3.943(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<4>       |   -1.173(R)|      FAST  |    3.797(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<5>       |   -1.190(R)|      FAST  |    3.792(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<6>       |   -1.129(R)|      FAST  |    3.740(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<7>       |   -1.191(R)|      FAST  |    3.854(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<8>       |   -0.838(R)|      FAST  |    3.402(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<9>       |   -0.844(R)|      FAST  |    3.394(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<10>      |   -0.835(R)|      FAST  |    3.418(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<11>      |   -0.694(R)|      FAST  |    3.207(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<12>      |   -0.954(R)|      FAST  |    3.620(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<13>      |   -1.043(R)|      FAST  |    3.727(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<14>      |   -0.842(R)|      FAST  |    3.447(R)|      SLOW  |clk_100ld         |   0.000|
+DQ<15>      |   -0.919(R)|      FAST  |    3.493(R)|      SLOW  |clk_100ld         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLOCK_12 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+BA<0>       |        11.812(R)|      SLOW  |         6.270(R)|      FAST  |clk_100ld         |   0.000|
+BA<1>       |        12.480(R)|      SLOW  |         6.693(R)|      FAST  |clk_100ld         |   0.000|
+CAS_N       |        12.809(R)|      SLOW  |         6.858(R)|      FAST  |clk_100ld         |   0.000|
+DQ<0>       |        14.244(R)|      SLOW  |         7.033(R)|      FAST  |clk_100ld         |   0.000|
+DQ<1>       |        14.493(R)|      SLOW  |         7.166(R)|      FAST  |clk_100ld         |   0.000|
+DQ<2>       |        14.347(R)|      SLOW  |         7.003(R)|      FAST  |clk_100ld         |   0.000|
+DQ<3>       |        14.224(R)|      SLOW  |         6.942(R)|      FAST  |clk_100ld         |   0.000|
+DQ<4>       |        14.334(R)|      SLOW  |         7.003(R)|      FAST  |clk_100ld         |   0.000|
+DQ<5>       |        14.232(R)|      SLOW  |         7.151(R)|      FAST  |clk_100ld         |   0.000|
+DQ<6>       |        14.760(R)|      SLOW  |         7.568(R)|      FAST  |clk_100ld         |   0.000|
+DQ<7>       |        14.422(R)|      SLOW  |         7.570(R)|      FAST  |clk_100ld         |   0.000|
+DQ<8>       |        14.160(R)|      SLOW  |         7.626(R)|      FAST  |clk_100ld         |   0.000|
+DQ<9>       |        14.054(R)|      SLOW  |         7.536(R)|      FAST  |clk_100ld         |   0.000|
+DQ<10>      |        13.759(R)|      SLOW  |         7.465(R)|      FAST  |clk_100ld         |   0.000|
+DQ<11>      |        13.762(R)|      SLOW  |         7.392(R)|      FAST  |clk_100ld         |   0.000|
+DQ<12>      |        13.785(R)|      SLOW  |         7.223(R)|      FAST  |clk_100ld         |   0.000|
+DQ<13>      |        13.935(R)|      SLOW  |         7.223(R)|      FAST  |clk_100ld         |   0.000|
+DQ<14>      |        14.054(R)|      SLOW  |         7.489(R)|      FAST  |clk_100ld         |   0.000|
+DQ<15>      |        13.720(R)|      SLOW  |         7.318(R)|      FAST  |clk_100ld         |   0.000|
+LDQM        |        15.520(R)|      SLOW  |         8.631(R)|      FAST  |clk_100ld         |   0.000|
+RAS_N       |        11.840(R)|      SLOW  |         6.272(R)|      FAST  |clk_100ld         |   0.000|
+SA<0>       |        12.787(R)|      SLOW  |         6.870(R)|      FAST  |clk_100ld         |   0.000|
+SA<1>       |        12.763(R)|      SLOW  |         6.853(R)|      FAST  |clk_100ld         |   0.000|
+SA<2>       |        12.604(R)|      SLOW  |         6.781(R)|      FAST  |clk_100ld         |   0.000|
+SA<3>       |        12.161(R)|      SLOW  |         6.485(R)|      FAST  |clk_100ld         |   0.000|
+SA<4>       |        12.716(R)|      SLOW  |         6.832(R)|      FAST  |clk_100ld         |   0.000|
+SA<5>       |        12.543(R)|      SLOW  |         6.730(R)|      FAST  |clk_100ld         |   0.000|
+SA<6>       |        13.095(R)|      SLOW  |         7.086(R)|      FAST  |clk_100ld         |   0.000|
+SA<7>       |        13.015(R)|      SLOW  |         6.993(R)|      FAST  |clk_100ld         |   0.000|
+SA<8>       |        12.118(R)|      SLOW  |         6.460(R)|      FAST  |clk_100ld         |   0.000|
+SA<9>       |        12.240(R)|      SLOW  |         6.524(R)|      FAST  |clk_100ld         |   0.000|
+SA<10>      |        13.304(R)|      SLOW  |         7.236(R)|      FAST  |clk_100ld         |   0.000|
+SA<11>      |        13.288(R)|      SLOW  |         7.166(R)|      FAST  |clk_100ld         |   0.000|
+SA<12>      |        12.236(R)|      SLOW  |         6.529(R)|      FAST  |clk_100ld         |   0.000|
+UDQM        |        13.611(R)|      SLOW  |         7.355(R)|      FAST  |clk_100ld         |   0.000|
+VGA_B<0>    |        11.557(R)|      SLOW  |         6.349(R)|      FAST  |clk_25            |   0.000|
+VGA_B<1>    |        11.696(R)|      SLOW  |         6.461(R)|      FAST  |clk_25            |   0.000|
+VGA_B<2>    |        11.525(R)|      SLOW  |         6.317(R)|      FAST  |clk_25            |   0.000|
+VGA_B<3>    |        11.594(R)|      SLOW  |         6.353(R)|      FAST  |clk_25            |   0.000|
+VGA_B<4>    |        11.433(R)|      SLOW  |         6.281(R)|      FAST  |clk_25            |   0.000|
+VGA_B<5>    |        11.782(R)|      SLOW  |         6.504(R)|      FAST  |clk_25            |   0.000|
+VGA_B<6>    |        11.709(R)|      SLOW  |         6.463(R)|      FAST  |clk_25            |   0.000|
+VGA_B<7>    |        12.963(R)|      SLOW  |         7.197(R)|      FAST  |clk_25            |   0.000|
+VGA_HS      |        12.544(R)|      SLOW  |         6.920(R)|      FAST  |clk_25            |   0.000|
+VGA_R<0>    |        11.301(R)|      SLOW  |         6.152(R)|      FAST  |clk_25            |   0.000|
+VGA_R<1>    |        11.274(R)|      SLOW  |         6.122(R)|      FAST  |clk_25            |   0.000|
+VGA_R<2>    |        12.559(R)|      SLOW  |         6.900(R)|      FAST  |clk_25            |   0.000|
+VGA_R<3>    |        12.495(R)|      SLOW  |         6.835(R)|      FAST  |clk_25            |   0.000|
+VGA_R<4>    |        12.558(R)|      SLOW  |         6.905(R)|      FAST  |clk_25            |   0.000|
+VGA_R<5>    |        12.652(R)|      SLOW  |         6.956(R)|      FAST  |clk_25            |   0.000|
+VGA_R<6>    |        12.933(R)|      SLOW  |         7.111(R)|      FAST  |clk_25            |   0.000|
+VGA_R<7>    |        12.858(R)|      SLOW  |         7.060(R)|      FAST  |clk_25            |   0.000|
+VGA_VS      |        12.750(R)|      SLOW  |         7.059(R)|      FAST  |clk_25            |   0.000|
+WE_N        |        13.371(R)|      SLOW  |         7.192(R)|      FAST  |clk_100ld         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLOCK_12
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK_12       |   17.199|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+CLOCK_12       |DRAM_CLK       |   11.065|
+CLOCK_12       |VGA_CLK        |   12.861|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Aug 24 22:36:16 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 224 MB
+
+
+

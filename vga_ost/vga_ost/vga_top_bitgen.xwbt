@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\ISEproj\vga_ost\vga_ost\vga_top.ncd
+OUTFILE=C:\Users\yingyu\Desktop\ISEproj\vga_ost\vga_ost\vga_top.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s400a-4ft256
+WORKINGDIR=C:\Users\yingyu\Desktop\ISEproj\vga_ost\vga_ost
+LICENSE=WebPack
+USER_INFO=208127600_0_0_051

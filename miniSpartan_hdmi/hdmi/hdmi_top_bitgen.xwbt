@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\hdmi_top.ncd
+OUTFILE=C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\hdmi_top.bit
+FAMILY=Spartan6
+PART=xc6slx25-3ftg256
+WORKINGDIR=C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi
+LICENSE=WebPack
+USER_INFO=210981254_0_0_774

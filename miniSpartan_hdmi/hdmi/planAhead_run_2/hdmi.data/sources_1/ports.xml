@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="TMDSp">
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="TMDSn">
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="LED">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="clock_50" Dir="IN"/>
+		<Port Id="TMDSp_clock" Dir="OUT"/>
+		<Port Id="TMDSn_clock" Dir="OUT"/>
+		<DiffPair Pos="TMDSp[2]" Neg="TMDSn[2]"/>
+		<DiffPair Pos="TMDSp[1]" Neg="TMDSn[1]"/>
+		<DiffPair Pos="TMDSp[0]" Neg="TMDSn[0]"/>
+		<DiffPair Pos="TMDSp_clock" Neg="TMDSn_clock"/>
+	</Ifc>
+</Interface>
+

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Start of session at: Thu Sep 17 17:17:22 2015
+# Process ID: 6340
+# Log file: C:/Users/yingyu/Desktop/ISEproj/SPI_ctrl/SPI_HOST/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/yingyu/Desktop/ISEproj/SPI_ctrl/SPI_HOST/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/yingyu/Desktop/ISEproj/SPI_ctrl/SPI_HOST/pa.fromNetlist.tcl
+exit
+stop_gui

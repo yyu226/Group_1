@@ -1,0 +1,1303 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.74 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.74 secs
+ 
+--> Reading design: vga_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga_top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : vga_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+change_error_to_warning            : "HDLCompiler:1128"
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+INFO:Xst - Changing 'HDLCompiler:1128' to warning
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\dcm.v" into library work
+Parsing module <dcm>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\dcm\example_design\dcm_exdes.v" into library work
+Parsing module <dcm_exdes>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\fifo_vga.v" into library work
+Parsing module <fifo_vga>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\data_path.v" into library work
+Parsing module <sdr_data_path>.
+Parsing verilog file "Sdram_Params.h" included at line 30.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\controller.v" into library work
+Parsing module <control_interface>.
+Parsing verilog file "Sdram_Params.h" included at line 41.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\command.v" into library work
+Parsing module <command>.
+Parsing verilog file "Sdram_Params.h" included at line 47.
+WARNING:HDLCompiler:98 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\command.v" Line 78: CS_N was previously declared with a range
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\VGA_Controller.v" into library work
+Parsing module <VGA_Controller>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" into library work
+Parsing module <sdram_top>.
+Parsing verilog file "Sdram_Params.h" included at line 63.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\Reset_Delay.v" into library work
+Parsing module <Reset_Delay>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\pll.v" into library work
+Parsing module <pll>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" into library work
+Parsing module <vga_top>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\pll\example_design\pll_exdes.v" into library work
+Parsing module <pll_exdes>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <vga_top>.
+
+Elaborating module <dcm>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=6,CLKFX_MULTIPLY=25,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=83.3333333333,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="NONE",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\dcm.v" Line 113: Assignment to clk0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\dcm.v" Line 128: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\dcm.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <pll>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="LOW",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="INTERNAL",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=10,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=5,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=5,CLKOUT1_PHASE=-252.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=20,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\pll.v" Line 123: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\pll.v" Line 124: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\pll.v" Line 125: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\pll.v" Line 126: Assignment to locked_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:604 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 187: Module instantiation should have an instance name
+
+Elaborating module <VGA_Controller>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\VGA_Controller.v" Line 90: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\VGA_Controller.v" Line 93: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\VGA_Controller.v" Line 96: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\VGA_Controller.v" Line 153: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\VGA_Controller.v" Line 179: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 188: Size mismatch in connection of port <iRed>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 189: Size mismatch in connection of port <iGreen>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 190: Size mismatch in connection of port <iBlue>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 193: Size mismatch in connection of port <oVGA_R>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 194: Size mismatch in connection of port <oVGA_G>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 195: Size mismatch in connection of port <oVGA_B>. Formal port size is 10-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 207: Assignment to go ignored, since the identifier is never used
+
+Elaborating module <sdram_top>.
+
+Elaborating module <control_interface>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\controller.v" Line 170: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 241: Size mismatch in connection of port <CMD>. Formal port size is 3-bit while actual signal size is 2-bit.
+
+Elaborating module <command>.
+
+Elaborating module <sdr_data_path>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 287: Assignment to IDQM ignored, since the identifier is never used
+
+Elaborating module <fifo_vga>.
+WARNING:HDLCompiler:1499 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\ipcore_dir\fifo_vga.v" Line 39: Empty module <fifo_vga> remains a black box.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 319: Assignment to EPT1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 350: Assignment to wDATAOUT ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 373: Assignment to wr_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 380: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:462 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 449: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:462 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 451: if-condition does not match any sensitivity list edge
+WARNING:HDLCompiler:1128 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 451: Assignment under multiple single edges is not supported for synthesis
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 457: Assignment to rd1_en ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 564: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 595: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\sdram_top.v" Line 606: Assignment to rRD2_MAX_ADDR ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 277: Size mismatch in connection of port <WR_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 278: Size mismatch in connection of port <WR_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 285: Size mismatch in connection of port <RD1_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 286: Size mismatch in connection of port <RD1_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 290: Size mismatch in connection of port <RD2_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 291: Size mismatch in connection of port <RD2_MAX_ADDR>. Formal port size is 24-bit while actual signal size is 32-bit.
+
+Elaborating module <Reset_Delay>.
+WARNING:HDLCompiler:552 - "C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.v" Line 187: Input port iZOOM_MODE_SW is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vga_top>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v".
+WARNING:Xst:2898 - Port 'iZOOM_MODE_SW', unconnected in block instance '_i000001', is tied to GND.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v" line 187: Output port <oH_Cont> of the instance <_i000001> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v" line 187: Output port <oVGA_SYNC> of the instance <_i000001> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v" line 187: Output port <oVGA_BLANK> of the instance <_i000001> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v" line 309: Output port <oRST_1> of the instance <u2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v" line 309: Output port <oRST_3> of the instance <u2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_top.v" line 309: Output port <oRST_4> of the instance <u2> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <vga_top> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/ipcore_dir/dcm.v".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+Synthesizing Unit <pll>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/ipcore_dir/pll.v".
+    Summary:
+	no macro.
+Unit <pll> synthesized.
+
+Synthesizing Unit <VGA_Controller>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/vga_controller.v".
+        H_SYNC_CYC = 96
+        H_SYNC_BACK = 48
+        H_SYNC_ACT = 640
+        H_SYNC_FRONT = 16
+        H_SYNC_TOTAL = 800
+        V_SYNC_CYC = 2
+        V_SYNC_BACK = 33
+        V_SYNC_ACT = 480
+        V_SYNC_FRONT = 10
+        V_SYNC_TOTAL = 525
+        X_START = 144
+        Y_START = 35
+WARNING:Xst:647 - Input <iZOOM_MODE_SW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <oVGA_R>.
+    Found 8-bit register for signal <oVGA_B>.
+    Found 1-bit register for signal <oVGA_BLANK>.
+    Found 1-bit register for signal <oVGA_H_SYNC>.
+    Found 1-bit register for signal <oVGA_V_SYNC>.
+    Found 1-bit register for signal <oRequest>.
+    Found 1-bit register for signal <mVGA_H_SYNC>.
+    Found 1-bit register for signal <mVGA_V_SYNC>.
+    Found 13-bit register for signal <H_Cont>.
+    Found 13-bit register for signal <V_Cont>.
+    Found 13-bit adder for signal <H_Cont[12]_GND_8_o_add_28_OUT> created at line 153.
+    Found 13-bit adder for signal <V_Cont[12]_GND_8_o_add_34_OUT> created at line 179.
+    Found 13-bit comparator lessequal for signal <n0004> created at line 90
+    Found 13-bit comparator greater for signal <H_Cont[12]_GND_8_o_LessThan_4_o> created at line 90
+    Found 14-bit comparator lessequal for signal <n0009> created at line 91
+    Found 13-bit comparator lessequal for signal <n0024> created at line 133
+    Found 13-bit comparator greater for signal <H_Cont[12]_GND_8_o_LessThan_25_o> created at line 133
+    Found 13-bit comparator lessequal for signal <n0028> created at line 134
+    Found 13-bit comparator greater for signal <V_Cont[12]_GND_8_o_LessThan_27_o> created at line 134
+    Found 13-bit comparator greater for signal <H_Cont[12]_GND_8_o_LessThan_28_o> created at line 152
+    Found 13-bit comparator lessequal for signal <H_Cont[12]_GND_8_o_LessThan_31_o> created at line 157
+    Found 13-bit comparator greater for signal <V_Cont[12]_GND_8_o_LessThan_34_o> created at line 178
+    Found 13-bit comparator lessequal for signal <V_Cont[12]_GND_8_o_LessThan_37_o> created at line 183
+    WARNING:Xst:2404 -  FFs/Latches <oVGA_SYNC<0:0>> (without init value) have a constant value of 0 in block <VGA_Controller>.
+    WARNING:Xst:2404 -  FFs/Latches <oVGA_R<9:8>> (without init value) have a constant value of 0 in block <VGA_Controller>.
+    WARNING:Xst:2404 -  FFs/Latches <oVGA_G<9:8>> (without init value) have a constant value of 0 in block <VGA_Controller>.
+    WARNING:Xst:2404 -  FFs/Latches <oVGA_B<9:8>> (without init value) have a constant value of 0 in block <VGA_Controller>.
+    WARNING:Xst:2404 -  FFs/Latches <oVGA_G<7:0>> (without init value) have a constant value of 0 in block <VGA_Controller>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+	inferred  11 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <VGA_Controller> synthesized.
+
+Synthesizing Unit <sdram_top>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+WARNING:Xst:647 - Input <RD2_ADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_MAX_ADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_LENGTH<7:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RD2_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <LOAD_DELAY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v" line 281: Output port <DQM> of the instance <u_sdr_data_path> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v" line 310: Output port <rd_data_count> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v" line 310: Output port <full> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v" line 310: Output port <empty> of the instance <RD_PING> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v" line 352: Output port <full> of the instance <WR_16x16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/sdram_top.v" line 352: Output port <empty> of the instance <WR_16x16> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <SDCDATA>.
+    Found 1-bit register for signal <FULL>.
+    Found 1-bit register for signal <fifo_rst>.
+    Found 1-bit register for signal <pre_fifo_rst>.
+    Found 1-bit register for signal <rst_sync>.
+    Found 13-bit register for signal <SA>.
+    Found 2-bit register for signal <BA>.
+    Found 1-bit register for signal <CS_N>.
+    Found 1-bit register for signal <CKE>.
+    Found 1-bit register for signal <RAS_N>.
+    Found 1-bit register for signal <CAS_N>.
+    Found 1-bit register for signal <WE_N>.
+    Found 1-bit register for signal <PM_STOP>.
+    Found 1-bit register for signal <PM_DONE>.
+    Found 2-bit register for signal <DQM>.
+    Found 16-bit register for signal <mDATAOUT>.
+    Found 2-bit register for signal <CMD>.
+    Found 10-bit register for signal <ST>.
+    Found 1-bit register for signal <Pre_RD>.
+    Found 1-bit register for signal <Pre_WR>.
+    Found 1-bit register for signal <Read>.
+    Found 1-bit register for signal <Write>.
+    Found 1-bit register for signal <OUT_VALID>.
+    Found 1-bit register for signal <IN_REQ>.
+    Found 1-bit register for signal <mWR_DONE>.
+    Found 1-bit register for signal <mRD_DONE>.
+    Found 24-bit register for signal <pixel_counter>.
+    Found 24-bit register for signal <rRD1_ADDR>.
+    Found 24-bit register for signal <rWR_MAX_ADDR>.
+    Found 24-bit register for signal <rRD1_MAX_ADDR>.
+    Found 8-bit register for signal <rWR_LENGTH>.
+    Found 8-bit register for signal <rRD1_LENGTH>.
+    Found 24-bit register for signal <rWR_ADDR>.
+    Found 1-bit register for signal <mWR>.
+    Found 1-bit register for signal <mRD>.
+    Found 24-bit register for signal <mADDR>.
+    Found 8-bit register for signal <mLENGTH>.
+    Found 2-bit register for signal <RD_MASK>.
+    Found 2-bit register for signal <WR_MASK>.
+    Found finite state machine <FSM_0> for signal <WR_MASK>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 8                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | mWR_DONE (positive)                            |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 10-bit subtractor for signal <GND_9_o_GND_9_o_sub_107_OUT> created at line 588.
+    Found 24-bit subtractor for signal <rWR_MAX_ADDR[23]_GND_9_o_sub_123_OUT> created at line 651.
+    Found 24-bit subtractor for signal <rRD1_MAX_ADDR[23]_GND_9_o_sub_128_OUT> created at line 661.
+    Found 9-bit adder for signal <n0363[8:0][8:0]> created at line 506.
+    Found 9-bit adder for signal <n0365[8:0][8:0]> created at line 514.
+    Found 10-bit adder for signal <_n0400> created at line 514.
+    Found 10-bit adder for signal <_n0389> created at line 563.
+    Found 10-bit adder for signal <ST[9]_GND_9_o_add_93_OUT> created at line 564.
+    Found 24-bit adder for signal <pixel_counter[23]_GND_9_o_add_111_OUT> created at line 595.
+    Found 24-bit adder for signal <rWR_ADDR[23]_GND_9_o_add_124_OUT> created at line 652.
+    Found 24-bit adder for signal <rRD1_ADDR[23]_GND_9_o_add_129_OUT> created at line 663.
+    Found 1-bit tristate buffer for signal <DQ<15>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<14>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<13>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<12>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<11>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<10>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<9>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<8>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<7>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<6>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<5>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<4>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<3>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<2>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<1>> created at line 369
+    Found 1-bit tristate buffer for signal <DQ<0>> created at line 369
+    Found 24-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_4_o> created at line 378
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_7_o> created at line 381
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_9_o> created at line 385
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_11_o> created at line 389
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_13_o> created at line 393
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_15_o> created at line 397
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_GND_9_o_LessThan_17_o> created at line 399
+    Found 10-bit comparator greater for signal <rWR_ADDR[23]_PWR_9_o_LessThan_19_o> created at line 401
+    Found 8-bit comparator greater for signal <GND_9_o_INV_723_o> created at line 442
+    Found 10-bit comparator lessequal for signal <n0062> created at line 515
+    Found 32-bit comparator equal for signal <GND_9_o_GND_9_o_equal_108_o> created at line 588
+    Found 24-bit comparator greater for signal <pixel_counter[23]_GND_9_o_LessThan_159_o> created at line 594
+    Found 24-bit comparator lessequal for signal <rWR_ADDR[23]_rWR_MAX_ADDR[23]_LessThan_124_o> created at line 651
+    Found 24-bit comparator lessequal for signal <rRD1_ADDR[23]_rRD1_MAX_ADDR[23]_LessThan_129_o> created at line 661
+    Found 8-bit comparator greater for signal <n0185> created at line 730
+    Found 8-bit comparator greater for signal <read_side_fifo_wusedw1[7]_GND_9_o_LessThan_165_o> created at line 751
+    Found 10-bit comparator equal for signal <GND_9_o_GND_9_o_equal_104_o> created at line 563
+    Found 10-bit comparator equal for signal <GND_9_o_GND_9_o_equal_75_o> created at line 514
+    Found 10-bit comparator equal for signal <GND_9_o_GND_9_o_equal_63_o> created at line 506
+    Found 10-bit comparator equal for signal <GND_9_o_GND_9_o_equal_110_o> created at line 590
+    Summary:
+	inferred  11 Adder/Subtractor(s).
+	inferred 252 D-type flip-flop(s).
+	inferred  20 Comparator(s).
+	inferred  17 Multiplexer(s).
+	inferred  16 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <sdram_top> synthesized.
+
+Synthesizing Unit <control_interface>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/controller.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+    Found 1-bit register for signal <READA>.
+    Found 1-bit register for signal <WRITEA>.
+    Found 24-bit register for signal <SADDR>.
+    Found 1-bit register for signal <CMD_ACK>.
+    Found 16-bit register for signal <timer>.
+    Found 1-bit register for signal <REF_REQ>.
+    Found 16-bit register for signal <init_timer>.
+    Found 1-bit register for signal <REFRESH>.
+    Found 1-bit register for signal <PRECHARGE>.
+    Found 1-bit register for signal <LOAD_MODE>.
+    Found 1-bit register for signal <INIT_REQ>.
+    Found 1-bit register for signal <NOP>.
+    Found 16-bit subtractor for signal <timer[15]_GND_10_o_sub_12_OUT> created at line 149.
+    Found 16-bit adder for signal <init_timer[15]_GND_10_o_add_18_OUT> created at line 170.
+    Found 16-bit comparator greater for signal <init_timer[15]_GND_10_o_LessThan_18_o> created at line 169
+    Found 16-bit comparator greater for signal <init_timer[15]_GND_10_o_LessThan_21_o> created at line 172
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <control_interface> synthesized.
+
+Synthesizing Unit <command>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/command.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+WARNING:Xst:647 - Input <NOP> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PM_DONE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <do_writea>.
+    Found 1-bit register for signal <do_refresh>.
+    Found 1-bit register for signal <do_precharge>.
+    Found 1-bit register for signal <do_load_mode>.
+    Found 1-bit register for signal <do_initial>.
+    Found 1-bit register for signal <command_done>.
+    Found 8-bit register for signal <command_delay>.
+    Found 1-bit register for signal <rw_flag>.
+    Found 4-bit register for signal <rp_shift>.
+    Found 1-bit register for signal <rp_done>.
+    Found 1-bit register for signal <ex_read>.
+    Found 1-bit register for signal <ex_write>.
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <oe4>.
+    Found 2-bit register for signal <rw_shift>.
+    Found 1-bit register for signal <do_rw>.
+    Found 1-bit register for signal <CM_ACK>.
+    Found 1-bit register for signal <REF_ACK>.
+    Found 13-bit register for signal <SA>.
+    Found 2-bit register for signal <BA>.
+    Found 1-bit register for signal <RAS_N>.
+    Found 1-bit register for signal <CAS_N>.
+    Found 1-bit register for signal <WE_N>.
+    Found 1-bit register for signal <do_reada>.
+    WARNING:Xst:2404 -  FFs/Latches <CS_N<0:0>> (without init value) have a constant value of 0 in block <command>.
+    WARNING:Xst:2404 -  FFs/Latches <CKE<0:0>> (without init value) have a constant value of 1 in block <command>.
+    Summary:
+	inferred  48 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <command> synthesized.
+
+Synthesizing Unit <sdr_data_path>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/data_path.v".
+        INIT_PER = 24000
+        REF_PER = 1024
+        SC_CL = 3
+        SC_RCD = 3
+        SC_RRD = 7
+        SC_PM = 1
+        SC_BL = 1
+        SDR_BL = 3'b111
+        SDR_BT = 1'b0
+        SDR_CL = 3'b011
+    WARNING:Xst:2404 -  FFs/Latches <DQM<1:0>> (without init value) have a constant value of 0 in block <sdr_data_path>.
+    Summary:
+	no macro.
+Unit <sdr_data_path> synthesized.
+
+Synthesizing Unit <mod_24u_10u>.
+    Related source file is "".
+    Found 34-bit adder for signal <GND_40_o_b[9]_add_1_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_40_o_b[9]_add_3_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_40_o_b[9]_add_5_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_40_o_b[9]_add_7_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_40_o_b[9]_add_9_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_40_o_b[9]_add_11_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_40_o_b[9]_add_13_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_40_o_b[9]_add_15_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_40_o_b[9]_add_17_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_40_o_b[9]_add_19_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_b[9]_add_21_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_23_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_25_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_27_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_29_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_31_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_33_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_35_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_37_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_39_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_41_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_43_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_45_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_47_OUT> created at line 0.
+    Found 24-bit adder for signal <a[23]_GND_40_o_add_49_OUT> created at line 0.
+    Found 34-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Summary:
+	inferred  25 Adder/Subtractor(s).
+	inferred  25 Comparator(s).
+	inferred 577 Multiplexer(s).
+Unit <mod_24u_10u> synthesized.
+
+Synthesizing Unit <Reset_Delay>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/xula2_sdram/xula2_sdram/reset_delay.v".
+    Summary:
+	no macro.
+Unit <Reset_Delay> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 40
+ 10-bit adder                                          : 3
+ 10-bit subtractor                                     : 1
+ 13-bit adder                                          : 2
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 24-bit adder                                          : 18
+ 24-bit subtractor                                     : 2
+ 25-bit adder                                          : 1
+ 26-bit adder                                          : 1
+ 27-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 29-bit adder                                          : 1
+ 30-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 33-bit adder                                          : 1
+ 34-bit adder                                          : 1
+ 9-bit adder                                           : 2
+# Registers                                            : 84
+ 1-bit register                                        : 55
+ 10-bit register                                       : 1
+ 13-bit register                                       : 4
+ 16-bit register                                       : 4
+ 2-bit register                                        : 6
+ 24-bit register                                       : 7
+ 4-bit register                                        : 1
+ 8-bit register                                        : 6
+# Comparators                                          : 58
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 1
+ 13-bit comparator greater                             : 5
+ 13-bit comparator lessequal                           : 5
+ 14-bit comparator lessequal                           : 1
+ 16-bit comparator greater                             : 2
+ 24-bit comparator greater                             : 2
+ 24-bit comparator lessequal                           : 17
+ 25-bit comparator lessequal                           : 1
+ 26-bit comparator lessequal                           : 1
+ 27-bit comparator lessequal                           : 1
+ 28-bit comparator lessequal                           : 1
+ 29-bit comparator lessequal                           : 1
+ 30-bit comparator lessequal                           : 1
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator lessequal                           : 1
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 8-bit comparator greater                              : 3
+# Multiplexers                                         : 611
+ 1-bit 2-to-1 multiplexer                              : 590
+ 10-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 3
+ 24-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo_vga.ngc>.
+Loading core <fifo_vga> for timing and area information for instance <RD_PING>.
+Loading core <fifo_vga> for timing and area information for instance <WR_16x16>.
+INFO:Xst:2261 - The FF/Latch <DQM_0> in Unit <SDRAMIF> is equivalent to the following FF/Latch, which will be removed : <DQM_1> 
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_7> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_8> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_9> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_10> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_11> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_12> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_13> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_14> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_15> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_16> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_17> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_18> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_19> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_20> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_21> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_22> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_7> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_6> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_5> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_4> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_3> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_2> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_1> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_LENGTH_0> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_7> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_6> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_5> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_4> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_3> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_2> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_1> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_LENGTH_0> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_23> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <CS_N> has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <CKE> has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_0> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_1> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_2> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_3> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_4> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_5> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_6> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_7> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_8> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_9> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_10> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_11> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_12> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_13> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_6> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_5> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_4> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_3> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_2> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_1> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rWR_MAX_ADDR_0> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_23> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_22> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_21> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_20> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_19> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_18> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_17> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_16> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_15> (without init value) has a constant value of 1 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_14> (without init value) has a constant value of 0 in block <SDRAMIF>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <RD_MASK_1> of sequential type is unconnected in block <SDRAMIF>.
+WARNING:Xst:1290 - Hierarchical block <u2> is unconnected in block <vga_top>.
+   It will be removed from the design.
+
+Synthesizing (advanced) Unit <VGA_Controller>.
+The following registers are absorbed into counter <H_Cont>: 1 register on signal <H_Cont>.
+The following registers are absorbed into counter <V_Cont>: 1 register on signal <V_Cont>.
+Unit <VGA_Controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <control_interface>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+The following registers are absorbed into counter <init_timer>: 1 register on signal <init_timer>.
+Unit <control_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram_top>.
+The following registers are absorbed into accumulator <rWR_ADDR>: 1 register on signal <rWR_ADDR>.
+The following registers are absorbed into accumulator <rRD1_ADDR>: 1 register on signal <rRD1_ADDR>.
+The following registers are absorbed into accumulator <pixel_counter>: 1 register on signal <pixel_counter>.
+Unit <sdram_top> synthesized (advanced).
+WARNING:Xst:2677 - Node <RD_MASK_1> of sequential type is unconnected in block <sdram_top>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 33
+ 10-bit adder                                          : 4
+ 10-bit subtractor                                     : 1
+ 24-bit adder                                          : 24
+ 24-bit subtractor                                     : 2
+ 9-bit adder                                           : 2
+# Counters                                             : 4
+ 13-bit up counter                                     : 2
+ 16-bit down counter                                   : 1
+ 16-bit up counter                                     : 1
+# Accumulators                                         : 3
+ 24-bit up accumulator                                 : 3
+# Registers                                            : 282
+ Flip-Flops                                            : 282
+# Comparators                                          : 58
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 7
+ 10-bit comparator lessequal                           : 1
+ 13-bit comparator greater                             : 5
+ 13-bit comparator lessequal                           : 5
+ 14-bit comparator lessequal                           : 1
+ 16-bit comparator greater                             : 2
+ 24-bit comparator greater                             : 2
+ 24-bit comparator lessequal                           : 17
+ 25-bit comparator lessequal                           : 1
+ 26-bit comparator lessequal                           : 1
+ 27-bit comparator lessequal                           : 1
+ 28-bit comparator lessequal                           : 1
+ 29-bit comparator lessequal                           : 1
+ 30-bit comparator lessequal                           : 1
+ 31-bit comparator lessequal                           : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator lessequal                           : 1
+ 33-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+ 8-bit comparator greater                              : 3
+# Multiplexers                                         : 608
+ 1-bit 2-to-1 multiplexer                              : 590
+ 10-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 5
+ 2-bit 2-to-1 multiplexer                              : 3
+ 24-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <rRD1_MAX_ADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_6> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_8> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_9> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_10> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_11> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_12> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_13> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_14> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_15> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_16> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_17> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_18> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_19> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_20> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_21> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_22> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_MAX_ADDR_23> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_6> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_LENGTH_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_6> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_LENGTH_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_6> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_8> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_9> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_10> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_11> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_12> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_13> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_14> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_15> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_16> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_17> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_18> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_19> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_20> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_21> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_22> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_MAX_ADDR_23> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DQM_0> in Unit <sdram_top> is equivalent to the following FF/Latch, which will be removed : <DQM_1> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SDRAMIF/FSM_0> on signal <WR_MASK[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 0
+ 11    | 1
+-------------------
+WARNING:Xst:1710 - FF/Latch <rRD1_ADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rWR_ADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rRD1_ADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mADDR_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_7> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_6> (without init value) has a constant value of 1 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_5> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_4> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_3> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_2> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_1> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mLENGTH_0> (without init value) has a constant value of 0 in block <sdram_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <pixel_counter_1> of sequential type is unconnected in block <sdram_top>.
+WARNING:Xst:2677 - Node <pixel_counter_2> of sequential type is unconnected in block <sdram_top>.
+WARNING:Xst:2677 - Node <pixel_counter_3> of sequential type is unconnected in block <sdram_top>.
+WARNING:Xst:2677 - Node <pixel_counter_4> of sequential type is unconnected in block <sdram_top>.
+WARNING:Xst:2677 - Node <pixel_counter_5> of sequential type is unconnected in block <sdram_top>.
+WARNING:Xst:2677 - Node <pixel_counter_0> of sequential type is unconnected in block <sdram_top>.
+INFO:Xst:1901 - Instance PLL0/pll_base_inst in unit PLL0/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <SDCDATA_8> in Unit <sdram_top> is equivalent to the following 7 FFs/Latches, which will be removed : <SDCDATA_9> <SDCDATA_10> <SDCDATA_11> <SDCDATA_12> <SDCDATA_13> <SDCDATA_14> <SDCDATA_15> 
+INFO:Xst:2261 - The FF/Latch <SDCDATA_0> in Unit <sdram_top> is equivalent to the following 7 FFs/Latches, which will be removed : <SDCDATA_1> <SDCDATA_2> <SDCDATA_3> <SDCDATA_4> <SDCDATA_5> <SDCDATA_6> <SDCDATA_7> 
+WARNING:Xst:2016 - Found a loop when searching source clock on port 'VGA_CLK:VGA_CLK'
+Last warning will be issued only once.
+
+Optimizing unit <vga_top> ...
+
+Optimizing unit <control_interface> ...
+
+Optimizing unit <command> ...
+
+Optimizing unit <mod_24u_10u> ...
+
+Optimizing unit <VGA_Controller> ...
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/CKE> has a constant value of 1 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <SDRAMIF/CS_N> has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_5> (without init value) has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_4> (without init value) has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_3> (without init value) has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_2> (without init value) has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_1> (without init value) has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <SDRAMIF/u_control_interface/SADDR_0> (without init value) has a constant value of 0 in block <vga_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <SDRAMIF/PM_DONE> of sequential type is unconnected in block <vga_top>.
+WARNING:Xst:2677 - Node <SDRAMIF/u_control_interface/NOP> of sequential type is unconnected in block <vga_top>.
+WARNING:Xst:2677 - Node <_i000001/oVGA_BLANK> of sequential type is unconnected in block <vga_top>.
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/rWR_ADDR_23> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <SDRAMIF/rWR_ADDR_22> <SDRAMIF/rWR_ADDR_21> <SDRAMIF/rWR_ADDR_20> <SDRAMIF/rWR_ADDR_19> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/u_command/SA_12> in Unit <vga_top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/u_command/SA_11> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/rRD1_ADDR_23> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <SDRAMIF/rRD1_ADDR_22> <SDRAMIF/rRD1_ADDR_20> <SDRAMIF/rRD1_ADDR_19> <SDRAMIF/rRD1_ADDR_21> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/SA_12> in Unit <vga_top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/SA_11> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/pixel_counter_22> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <SDRAMIF/pixel_counter_21> <SDRAMIF/pixel_counter_23> <SDRAMIF/pixel_counter_19> <SDRAMIF/pixel_counter_20> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/u_control_interface/SADDR_23> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <SDRAMIF/u_control_interface/SADDR_22> <SDRAMIF/u_control_interface/SADDR_21> <SDRAMIF/u_control_interface/SADDR_20> <SDRAMIF/u_control_interface/SADDR_19> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/u_command/BA_1> in Unit <vga_top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/u_command/BA_0> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/BA_1> in Unit <vga_top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/BA_0> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/WR_MASK_FSM_FFd1> in Unit <vga_top> is equivalent to the following FF/Latch, which will be removed : <SDRAMIF/mWR> 
+INFO:Xst:2261 - The FF/Latch <SDRAMIF/mADDR_23> in Unit <vga_top> is equivalent to the following 4 FFs/Latches, which will be removed : <SDRAMIF/mADDR_22> <SDRAMIF/mADDR_21> <SDRAMIF/mADDR_20> <SDRAMIF/mADDR_19> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vga_top, actual ratio is 14.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/WR_16x16> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/RD_PING> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/WR_16x16> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/WR_16x16> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <SDRAMIF/RD_PING> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <SDRAMIF/RD_PING> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+FlipFlop SDRAMIF/rWR_ADDR_15 has been replicated 1 time(s)
+FlipFlop SDRAMIF/rWR_ADDR_16 has been replicated 1 time(s)
+FlipFlop SDRAMIF/rWR_ADDR_17 has been replicated 1 time(s)
+FlipFlop SDRAMIF/rWR_ADDR_18 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 270
+ Flip-Flops                                            : 270
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : vga_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1207
+#      GND                         : 3
+#      INV                         : 18
+#      LUT1                        : 65
+#      LUT2                        : 136
+#      LUT3                        : 80
+#      LUT4                        : 47
+#      LUT5                        : 126
+#      LUT6                        : 324
+#      MUXCY                       : 197
+#      MUXF7                       : 6
+#      VCC                         : 3
+#      XORCY                       : 202
+# FlipFlops/Latches                : 540
+#      FD                          : 119
+#      FDC                         : 162
+#      FDCE                        : 66
+#      FDE                         : 44
+#      FDP                         : 26
+#      FDPE                        : 8
+#      FDR                         : 62
+#      FDRE                        : 43
+#      FDS                         : 10
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 69
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 52
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             540  out of  11440     4%  
+ Number of Slice LUTs:                  796  out of   5720    13%  
+    Number used as Logic:               796  out of   5720    13%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1013
+   Number with an unused Flip Flop:     473  out of   1013    46%  
+   Number with an unused LUT:           217  out of   1013    21%  
+   Number of fully used LUT-FF pairs:   323  out of   1013    31%  
+   Number of unique control sets:        44
+
+IO Utilization: 
+ Number of IOs:                          69
+ Number of bonded IOBs:                  69  out of    186    37%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                         | Load  |
+-----------------------------------+---------------------------------------------------------------------------------------------------------------+-------+
+PLL0/pll_base_inst/CLKOUT0         | BUFG                                                                                                          | 359   |
+CLOCK_12                           | DCM_SP:CLKFX                                                                                                  | 74    |
+PLL0/pll_base_inst/CLKOUT2         | NONE(SDRAMIF/RD_PING/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i)| 111   |
+-----------------------------------+---------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 18.331ns (Maximum Frequency: 54.552MHz)
+   Minimum input arrival time before clock: 1.903ns
+   Maximum output required time after clock: 5.000ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL0/pll_base_inst/CLKOUT0'
+  Clock period: 16.955ns (frequency: 58.979MHz)
+  Total number of paths / destination ports: 1087186534 / 710
+-------------------------------------------------------------------------
+Delay:               16.955ns (Levels of Logic = 15)
+  Source:            SDRAMIF/rWR_ADDR_17 (FF)
+  Destination:       SDRAMIF/SDCDATA_8 (FF)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT0 rising
+  Destination Clock: PLL0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: SDRAMIF/rWR_ADDR_17 to SDRAMIF/SDCDATA_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            20   0.447   1.437  SDRAMIF/rWR_ADDR_17 (SDRAMIF/rWR_ADDR_17)
+     LUT6:I1->O           11   0.203   0.987  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0019_INV_548_o1_SW7 (N221)
+     LUT5:I3->O            1   0.203   0.580  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0020_INV_573_o14_SW21_SW0_SW0 (N845)
+     LUT6:I5->O           28   0.205   1.463  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0020_INV_573_o14_SW21_SW0 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0020_INV_573_o11)
+     LUT6:I3->O           12   0.205   0.909  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0020_INV_573_o14 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0020_INV_573_o)
+     LUT6:I5->O           43   0.205   1.449  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0021_INV_598_o21 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0021_INV_598_o2)
+     LUT6:I5->O            9   0.205   1.174  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Mmux_a[21]_a[23]_MUX_1043_o11 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/a[21]_a[23]_MUX_1043_o)
+     LUT6:I1->O           25   0.203   1.193  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0022_INV_623_o23 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0022_INV_623_o)
+     LUT6:I5->O           24   0.205   1.173  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0023_INV_648_o22 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0023_INV_648_o21)
+     LUT6:I5->O            1   0.205   0.000  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Madd_a[23]_GND_40_o_add_47_OUT_lut<9> (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Madd_a[23]_GND_40_o_add_47_OUT_lut<9>)
+     MUXCY:S->O            1   0.172   0.000  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Madd_a[23]_GND_40_o_add_47_OUT_cy<9> (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Madd_a[23]_GND_40_o_add_47_OUT_cy<9>)
+     XORCY:CI->O           1   0.180   0.808  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Madd_a[23]_GND_40_o_add_47_OUT_xor<10> (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/a[23]_GND_40_o_add_47_OUT<10>)
+     LUT3:I0->O            1   0.205   0.580  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0025_INV_698_o25_SW0 (N114)
+     LUT6:I5->O            4   0.205   1.028  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0025_INV_698_o26 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/BUS_0025_INV_698_o25)
+     LUT6:I1->O            2   0.203   0.617  SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17/Mmux_o81 (SDRAMIF/rWR_ADDR[23]_PWR_9_o_mod_17_OUT<7>)
+     LUT6:I5->O            1   0.205   0.000  SDRAMIF/SDCDATA_8_glue_set (SDRAMIF/SDCDATA_8_glue_set)
+     FDRE:D                    0.102          SDRAMIF/SDCDATA_8
+    ----------------------------------------
+    Total                     16.955ns (3.558ns logic, 13.397ns route)
+                                       (21.0% logic, 79.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_12'
+  Clock period: 18.331ns (frequency: 54.552MHz)
+  Total number of paths / destination ports: 428 / 161
+-------------------------------------------------------------------------
+Delay:               4.399ns (Levels of Logic = 5)
+  Source:            SDRAMIF/FULL (FF)
+  Destination:       SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      CLOCK_12 rising 4.2X
+  Destination Clock: CLOCK_12 rising 4.2X
+
+  Data Path: SDRAMIF/FULL to SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.684  SDRAMIF/FULL (SDRAMIF/FULL)
+     LUT2:I1->O            2   0.205   0.961  SDRAMIF/WR1 (SDRAMIF/WR)
+     begin scope: 'SDRAMIF/WR_16x16:wr_en'
+     LUT5:I0->O            1   0.203   0.808  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o14 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o13)
+     LUT6:I3->O            1   0.205   0.580  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o15 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o14)
+     LUT5:I4->O            2   0.205   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/Mmux_comp1_GND_190_o_MUX_12_o19 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_GND_190_o_MUX_12_o)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      4.399ns (1.367ns logic, 3.033ns route)
+                                       (31.1% logic, 68.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL0/pll_base_inst/CLKOUT2'
+  Clock period: 7.090ns (frequency: 141.046MHz)
+  Total number of paths / destination ports: 3517 / 198
+-------------------------------------------------------------------------
+Delay:               3.545ns (Levels of Logic = 4)
+  Source:            _i000001/oRequest (FF)
+  Destination:       SDRAMIF/RD_PING/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i (FF)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT2 rising
+  Destination Clock: PLL0/pll_base_inst/CLKOUT2 falling
+
+  Data Path: _i000001/oRequest to SDRAMIF/RD_PING/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.995  _i000001/oRequest (_i000001/oRequest)
+     begin scope: 'SDRAMIF/RD_PING:rd_en'
+     LUT5:I0->O            1   0.203   0.808  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/comp0_comp1_OR_6_o2 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/comp0_comp1_OR_6_o2)
+     LUT6:I3->O            1   0.205   0.580  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/comp0_comp1_OR_6_o4 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/comp0_comp1_OR_6_o4)
+     LUT6:I5->O            2   0.205   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/comp0_comp1_OR_6_o8 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/comp0_comp1_OR_6_o)
+     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i
+    ----------------------------------------
+    Total                      3.545ns (1.162ns logic, 2.383ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL0/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            DQ<15> (PAD)
+  Destination:       SDRAMIF/mDATAOUT_15 (FF)
+  Destination Clock: PLL0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: DQ<15> to SDRAMIF/mDATAOUT_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.222   0.579  DQ_15_IOBUF (N38)
+     FD:D                      0.102          SDRAMIF/mDATAOUT_15
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL0/pll_base_inst/CLKOUT2'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            _i000001/oVGA_V_SYNC (FF)
+  Destination:       VGA_VS (PAD)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT2 rising
+
+  Data Path: _i000001/oVGA_V_SYNC to VGA_VS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  _i000001/oVGA_V_SYNC (_i000001/oVGA_V_SYNC)
+     OBUF:I->O                 2.571          VGA_VS_OBUF (VGA_VS)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL0/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 52 / 36
+-------------------------------------------------------------------------
+Offset:              5.000ns (Levels of Logic = 2)
+  Source:            SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       DQ<15> (PAD)
+  Source Clock:      PLL0/pll_base_inst/CLKOUT0 rising
+
+  Data Path: SDRAMIF/WR_16x16/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to DQ<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO11    1   1.850   0.579  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (dout<15>)
+     end scope: 'SDRAMIF/WR_16x16:dout<15>'
+     IOBUF:I->IO               2.571          DQ_15_IOBUF (DQ<15>)
+    ----------------------------------------
+    Total                      5.000ns (4.421ns logic, 0.579ns route)
+                                       (88.4% logic, 11.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK_12
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+CLOCK_12                  |    4.399|         |         |         |
+PLL0/pll_base_inst/CLKOUT0|    4.701|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL0/pll_base_inst/CLKOUT0
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+CLOCK_12                  |    3.628|         |         |         |
+PLL0/pll_base_inst/CLKOUT0|   16.955|         |         |         |
+PLL0/pll_base_inst/CLKOUT2|    1.950|    1.128|         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL0/pll_base_inst/CLKOUT2
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+PLL0/pll_base_inst/CLKOUT0|         |         |    1.679|         |
+PLL0/pll_base_inst/CLKOUT2|    6.327|    2.737|    3.545|         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 32.17 secs
+ 
+--> 
+
+Total memory usage is 298880 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  236 (   0 filtered)
+Number of infos    :   45 (   0 filtered)
+

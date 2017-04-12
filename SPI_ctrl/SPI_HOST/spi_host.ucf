@@ -1,0 +1,36 @@
+
+
+NET "cryst" LOC = A9;
+NET "cs" LOC = T8;
+NET "miso" LOC = P10;
+NET "mosi" LOC = T10;
+
+
+NET "cryst" IOSTANDARD = LVTTL;
+NET "cs" IOSTANDARD = SDIO;
+NET "miso" IOSTANDARD = SDIO;
+NET "mosi" IOSTANDARD = SDIO;
+
+
+
+NET "sck" LOC = R11;
+
+
+NET "sck" IOSTANDARD = SDIO;
+
+
+
+NET "cs_flash" LOC = T3;
+
+
+NET "cs_flash" IOSTANDARD = LVTTL;
+
+
+NET "gLED" LOC = T4;
+NET "rLED" LOC = K16;
+NET "yLED" LOC = M15;
+
+
+NET "gLED" IOSTANDARD = LVTTL;
+NET "rLED" IOSTANDARD = LVTTL;
+NET "yLED" IOSTANDARD = LVTTL;

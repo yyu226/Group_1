@@ -1,0 +1,36 @@
+Release 13.3 Drc O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Tue Dec 01 17:36:56 2015
+
+drc -z hdmi_top.ncd hdmi_top.pcf
+
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp MIST0/dcm_sp_inst,
+   consult the device Data Sheet.
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDSp<0>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDSp<1>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDSp<2>_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLUP on an active net. PULLUP of comp
+   TMDSp_clock_PULLUP is set but the tri state is not configured. 
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDSp<0>. The mBLUE/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDSp<1>. The mGREEN/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDSp<2>. The mRED/OBUFDS buffer is programmed as a true differential. Adding
+   a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+WARNING:PhysDesignRules:1863 - Unexpected differential configuration for comp
+   TMDSp_clock. The mCLOCK/OBUFDS buffer is programmed as a true differential.
+   Adding a pullup, pulldown, or keeper to a differential IO can create signal
+   integrity problems and can violate specifications.
+DRC detected 0 errors and 8 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

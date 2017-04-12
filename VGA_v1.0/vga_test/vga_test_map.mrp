@@ -1,0 +1,704 @@
+Release 13.3 Map O.76xd (nt64)
+Xilinx Mapping Report File for Design 'vga_test'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off
+-c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+Target Device  : xc3s400a
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Wed Mar 04 15:01:06 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    7
+Logic Utilization:
+  Total Number Slice Registers:         135 out of   7,168    1%
+    Number used as Flip Flops:          127
+    Number used as Latches:               8
+  Number of 4 input LUTs:                90 out of   7,168    1%
+Logic Distribution:
+  Number of occupied Slices:            122 out of   3,584    3%
+    Number of Slices containing only related logic:     122 out of     122 100%
+    Number of Slices containing unrelated logic:          0 out of     122   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         218 out of   7,168    3%
+    Number used as logic:                90
+    Number used as a route-thru:        128
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 36 out of     195   18%
+    IOB Flip Flops:                       2
+  Number of BUFGMUXs:                     3 out of      24   12%
+  Number of DCMs:                         1 out of       4   25%
+  Number of RAMB16BWEs:                   2 out of      20   10%
+
+Average Fanout of Non-Clock Nets:                2.09
+
+Peak Memory Usage:  266 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net srst is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net VCM1/vrs_not0001 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net HCM1/hd_not0001 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net HCM1/hde_not0001 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net VCM1/vr_not0001 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net VCM1/vrsp_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net HCM1/hdeb_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network DDSM1/phase_out<31> has no load.
+INFO:LIT:395 - The above info message is repeated 67 more times for the
+   following (max. 5 shown):
+   DDSM1/phase_out<30>,
+   DDSM1/phase_out<29>,
+   DDSM1/phase_out<28>,
+   DDSM1/phase_out<27>,
+   DDSM1/phase_out<26>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp DCMIP/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 174 block(s) removed
+  65 block(s) optimized away
+ 170 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "DCMIP/CLK2X_BUFG_INST" (CKBUF) removed.
+ The signal "DCMIP/CLK2X_BUF" is loadless and has been removed.
+Loadless block "DCMIP/CLKDV_BUFG_INST" (CKBUF) removed.
+ The signal "DCMIP/CLKDV_BUF" is loadless and has been removed.
+The signal "DDSM1/phase_out<31>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<30>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<29>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<28>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<27>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<26>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<25>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<24>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<23>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<22>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<21>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<20>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<19>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<18>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<17>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<16>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<15>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<14>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<13>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<12>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<11>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<10>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<9>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<8>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<7>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<6>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<5>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<4>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<3>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<2>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<1>" is sourceless and has been removed.
+The signal "DDSM1/phase_out<0>" is sourceless and has been removed.
+The signal "DDSM1/blk00000003/sig0000008d" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000026" (SFF) removed.
+  The signal "DDSM1/blk00000003/sig0000008e" is sourceless and has been removed.
+The signal "DDSM1/blk00000003/sig000000cf" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000109" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000f0" is sourceless and has been removed.
+The signal "DDSM1/blk00000003/sig000000d8" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000112" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000f9" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000132" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000d9" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000113" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000fa" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000133" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000da" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000114" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000fb" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000134" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000db" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000115" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000fc" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000135" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000dc" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000116" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000fd" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000136" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000dd" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000117" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000fe" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000137" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000de" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000118" (FF) removed.
+  The signal "DDSM1/blk00000003/sig000000ff" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000138" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000df" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000119" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000100" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000139" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e0" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk0000011a" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000101" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk0000013a" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e1" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk0000011b" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000102" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk0000013b" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e2" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk0000011c" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000103" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk0000013c" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e3" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk0000011d" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000104" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk0000013d" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e4" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk0000011e" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000105" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk0000013e" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e5" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk0000011f" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000106" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk0000013f" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e6" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000120" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000107" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000140" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e7" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000121" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000108" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000141" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e8" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000122" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000109" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000142" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000e9" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000123" (FF) removed.
+  The signal "DDSM1/blk00000003/sig0000010a" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000143" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000ea" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000124" (FF) removed.
+  The signal "DDSM1/blk00000003/sig0000010b" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000144" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000eb" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000125" (FF) removed.
+  The signal "DDSM1/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000145" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000ec" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000126" (FF) removed.
+  The signal "DDSM1/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000146" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000ed" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000127" (FF) removed.
+  The signal "DDSM1/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000147" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000ee" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000128" (FF) removed.
+  The signal "DDSM1/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000148" (FF) removed.
+The signal "DDSM1/blk00000003/sig000000ef" is sourceless and has been removed.
+ Sourceless block "DDSM1/blk00000003/blk00000129" (FF) removed.
+  The signal "DDSM1/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "DDSM1/blk00000003/blk00000149" (FF) removed.
+The signal "DDSM2/phase_out<31>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<30>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<29>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<28>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<27>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<26>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<25>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<24>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<23>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<22>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<21>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<20>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<19>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<18>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<17>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<16>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<15>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<14>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<13>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<12>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<11>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<10>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<9>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<8>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<7>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<6>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<5>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<4>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<3>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<2>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<1>" is sourceless and has been removed.
+The signal "DDSM2/phase_out<0>" is sourceless and has been removed.
+The signal "DDSM2/blk00000003/sig0000008d" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000026" (SFF) removed.
+  The signal "DDSM2/blk00000003/sig0000008e" is sourceless and has been removed.
+The signal "DDSM2/blk00000003/sig000000cf" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000109" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000f0" is sourceless and has been removed.
+The signal "DDSM2/blk00000003/sig000000d8" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000112" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000f9" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000132" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000d9" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000113" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000fa" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000133" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000da" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000114" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000fb" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000134" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000db" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000115" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000fc" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000135" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000dc" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000116" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000fd" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000136" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000dd" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000117" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000fe" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000137" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000de" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000118" (FF) removed.
+  The signal "DDSM2/blk00000003/sig000000ff" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000138" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000df" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000119" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000100" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000139" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e0" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk0000011a" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000101" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk0000013a" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e1" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk0000011b" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000102" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk0000013b" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e2" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk0000011c" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000103" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk0000013c" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e3" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk0000011d" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000104" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk0000013d" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e4" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk0000011e" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000105" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk0000013e" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e5" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk0000011f" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000106" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk0000013f" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e6" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000120" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000107" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000140" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e7" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000121" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000108" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000141" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e8" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000122" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000109" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000142" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000e9" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000123" (FF) removed.
+  The signal "DDSM2/blk00000003/sig0000010a" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000143" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000ea" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000124" (FF) removed.
+  The signal "DDSM2/blk00000003/sig0000010b" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000144" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000eb" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000125" (FF) removed.
+  The signal "DDSM2/blk00000003/sig0000010c" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000145" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000ec" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000126" (FF) removed.
+  The signal "DDSM2/blk00000003/sig0000010d" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000146" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000ed" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000127" (FF) removed.
+  The signal "DDSM2/blk00000003/sig0000010e" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000147" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000ee" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000128" (FF) removed.
+  The signal "DDSM2/blk00000003/sig0000010f" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000148" (FF) removed.
+The signal "DDSM2/blk00000003/sig000000ef" is sourceless and has been removed.
+ Sourceless block "DDSM2/blk00000003/blk00000129" (FF) removed.
+  The signal "DDSM2/blk00000003/sig00000110" is sourceless and has been removed.
+   Sourceless block "DDSM2/blk00000003/blk00000149" (FF) removed.
+Unused block "DDSM1/blk00000001" (ONE) removed.
+Unused block "DDSM1/blk00000002" (ZERO) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000ab" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000ae" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000b1" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000b4" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000b7" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000ba" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000bd" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000c0" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000c3" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000c6" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000c9" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000cc" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000cf" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000d2" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000d5" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000d8" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000db" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000de" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000e1" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000e4" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000e7" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000ea" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000ed" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk000000f0" (XOR) removed.
+Unused block "DDSM1/blk00000003/blk0000012a" (FF) removed.
+Unused block "DDSM1/blk00000003/blk0000012b" (FF) removed.
+Unused block "DDSM1/blk00000003/blk0000012c" (FF) removed.
+Unused block "DDSM1/blk00000003/blk0000012d" (FF) removed.
+Unused block "DDSM1/blk00000003/blk0000012e" (FF) removed.
+Unused block "DDSM1/blk00000003/blk0000012f" (FF) removed.
+Unused block "DDSM1/blk00000003/blk00000130" (FF) removed.
+Unused block "DDSM1/blk00000003/blk00000131" (FF) removed.
+Unused block "DDSM2/blk00000001" (ONE) removed.
+Unused block "DDSM2/blk00000002" (ZERO) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000ab" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000ae" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000b1" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000b4" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000b7" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000ba" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000bd" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000c0" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000c3" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000c6" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000c9" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000cc" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000cf" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000d2" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000d5" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000d8" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000db" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000de" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000e1" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000e4" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000e7" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000ea" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000ed" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk000000f0" (XOR) removed.
+Unused block "DDSM2/blk00000003/blk0000012a" (FF) removed.
+Unused block "DDSM2/blk00000003/blk0000012b" (FF) removed.
+Unused block "DDSM2/blk00000003/blk0000012c" (FF) removed.
+Unused block "DDSM2/blk00000003/blk0000012d" (FF) removed.
+Unused block "DDSM2/blk00000003/blk0000012e" (FF) removed.
+Unused block "DDSM2/blk00000003/blk0000012f" (FF) removed.
+Unused block "DDSM2/blk00000003/blk00000130" (FF) removed.
+Unused block "DDSM2/blk00000003/blk00000131" (FF) removed.
+Unused block "DDSM1/blk00000003/blk00000047/blk000000a6" (MUX) removed.
+Unused block "DDSM1/blk00000003/blk000000a8/blk00000107" (MUX) removed.
+Unused block "DDSM2/blk00000003/blk00000047/blk000000a6" (MUX) removed.
+Unused block "DDSM2/blk00000003/blk000000a8/blk00000107" (MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		DDSM1/blk00000003/blk00000004
+VCC 		DDSM1/blk00000003/blk00000005
+FD 		DDSM1/blk00000003/blk00000009
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000000a
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000000b
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000000c
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000000d
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000000e
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000000f
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000010
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000011
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000012
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000013
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000014
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000015
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000016
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000017
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000018
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000019
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000001a
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000001b
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000001c
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000001d
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000001e
+   optimized to 0
+FD 		DDSM1/blk00000003/blk0000001f
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000020
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000021
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000022
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000023
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000024
+   optimized to 0
+FD 		DDSM1/blk00000003/blk00000025
+   optimized to 0
+GND 		DDSM2/blk00000003/blk00000004
+VCC 		DDSM2/blk00000003/blk00000005
+FD 		DDSM2/blk00000003/blk00000008
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000009
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000000a
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000000b
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000000c
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000000d
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000000e
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000000f
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000010
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000011
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000012
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000013
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000014
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000015
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000016
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000017
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000018
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000019
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000001a
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000001b
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000001c
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000001d
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000001e
+   optimized to 0
+FD 		DDSM2/blk00000003/blk0000001f
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000020
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000021
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000022
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000023
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000024
+   optimized to 0
+FD 		DDSM2/blk00000003/blk00000025
+   optimized to 0
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
+|                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLOCK_66                           | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
+| VGA_B<0>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<2>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<3>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<4>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<5>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<6>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_B<7>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_BLANK_N                        | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_CLK                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<0>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<2>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<3>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<4>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<5>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<6>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_G<7>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_HS                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
+| VGA_R<0>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<1>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<2>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<3>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<4>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<5>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<6>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_R<7>                           | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_SYNC_N                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| VGA_VS                             | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
+| iso_gnd                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| psave_n                            | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| sync_in_1                          | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
+| sync_in_2                          | IBUF             | INPUT     | LVTTL                |       |          |         |              |          | 0 / 0    |                  |
+| sync_out_1                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| sync_out_2                         | IOB              | OUTPUT    | LVTTL                |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="4">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+		<Mode Id="JTAG"/>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="TMDSp[2]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDSp[1]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDSp[0]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDSn[2]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDSn[1]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDSn[0]" OffChipTerm="FP_3.3_50"/>
+		<Port Name="LED[7]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[6]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[5]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[4]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[3]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[2]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[1]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="LED[0]" OffChipTerm="FP_VTT_50"/>
+		<Port Name="clock_50" OffChipTerm="NONE"/>
+		<Port Name="TMDSp_clock" OffChipTerm="FP_3.3_50"/>
+		<Port Name="TMDSn_clock" OffChipTerm="FP_3.3_50"/>
+	</PortProps>
+</Compat>
+

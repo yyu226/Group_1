@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map O.76xd on Mon Oct 05 12:51:09 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sck" LOCATE = SITE "R11" LEVEL 1;
+COMP "gLED" LOCATE = SITE "T4" LEVEL 1;
+COMP "rLED" LOCATE = SITE "K16" LEVEL 1;
+COMP "yLED" LOCATE = SITE "M15" LEVEL 1;
+COMP "miso" LOCATE = SITE "P10" LEVEL 1;
+COMP "mosi" LOCATE = SITE "T10" LEVEL 1;
+COMP "cryst" LOCATE = SITE "A9" LEVEL 1;
+COMP "cs" LOCATE = SITE "T8" LEVEL 1;
+COMP "cs_flash" LOCATE = SITE "T3" LEVEL 1;
+SCHEMATIC END;
+

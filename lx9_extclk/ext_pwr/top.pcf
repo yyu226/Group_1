@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map O.76xd on Wed Feb 10 20:27:26 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LEDg" LOCATE = SITE "R7" LEVEL 1;
+COMP "LEDo" LOCATE = SITE "F15" LEVEL 1;
+COMP "LEDr" LOCATE = SITE "T4" LEVEL 1;
+COMP "clk_12m" LOCATE = SITE "A9" LEVEL 1;
+SCHEMATIC END;
+

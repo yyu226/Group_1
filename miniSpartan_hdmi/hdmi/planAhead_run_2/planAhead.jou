@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Start of session at: Tue Dec 01 13:28:39 2015
+# Process ID: 4508
+# Log file: C:/Users/yingyu/Desktop/ISEproj/miniSpartan_hdmi/hdmi/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/yingyu/Desktop/ISEproj/miniSpartan_hdmi/hdmi/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/yingyu/Desktop/ISEproj/miniSpartan_hdmi/hdmi/pa.fromNetlist.tcl
+set_property IOSTANDARD LVCMOS33 [get_ports [list {LED[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {LED[7]} {LED[6]} {LED[5]} {LED[4]} {LED[3]} {LED[2]} {LED[1]} {LED[0]}]]
+set_property loc "" [get_ports [list  {LED[0]}]]
+startgroup
+set_property loc PAD157 [get_ports {LED[7]}]
+endgroup
+startgroup
+set_property loc PAD155 [get_ports {LED[6]}]
+endgroup
+startgroup
+set_property loc PAD154 [get_ports {LED[5]}]
+endgroup
+startgroup
+set_property loc PAD156 [get_ports {LED[4]}]
+endgroup
+startgroup
+set_property loc PAD138 [get_ports {LED[3]}]
+endgroup
+startgroup
+set_property loc PAD153 [get_ports {LED[2]}]
+endgroup
+startgroup
+set_property loc PAD137 [get_ports {LED[1]}]
+endgroup
+startgroup
+set_property loc PAD136 [get_ports {LED[0]}]
+endgroup
+save_design
+exit
+stop_gui

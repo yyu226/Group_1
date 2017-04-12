@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.ncd
+OUTFILE=C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram\vga_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=C:\Users\yingyu\Desktop\ISEproj\xula2_sdram\xula2_sdram
+LICENSE=WebPack
+USER_INFO=210981254_0_0_774

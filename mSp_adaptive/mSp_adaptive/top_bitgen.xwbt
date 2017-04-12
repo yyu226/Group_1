@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.ncd
+OUTFILE=C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive\top.bit
+FAMILY=Spartan6
+PART=xc6slx25-3ftg256
+WORKINGDIR=C:\Users\yingyu\Desktop\ISEproj\mSp_adaptive\mSp_adaptive
+LICENSE=WebPack
+USER_INFO=210981254_0_0_774

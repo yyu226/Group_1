@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/ddsc.v"
+verilog work "dcmip.v"
+verilog work "../vcntr.v"
+verilog work "../rsff.v"
+verilog work "../rgboen.v"
+verilog work "../hcntr.v"
+verilog work "../vga_test.v"

@@ -1,0 +1,746 @@
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim vga_test.ngc vga_test_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim vga_test.ngc vga_test_synthesis.v 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim vga_test.ngc vga_test_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim vga_test.ngc vga_test_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim vga_test.ngc vga_test_synthesis.v 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 
+xst -intstyle ise -ifn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.xst" -ofn "C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/vga_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc vga_test.ucf -p xc3s400a-ft256-4 vga_test.ngc vga_test.ngd  
+map -intstyle ise -p xc3s400a-ft256-4 -cm area -ir off -pr off -c 100 -o vga_test_map.ncd vga_test.ngd vga_test.pcf 
+par -w -intstyle ise -ol high -t 1 vga_test_map.ncd vga_test.ncd vga_test.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_test.twx vga_test.ncd -o vga_test.twr vga_test.pcf -ucf vga_test.ucf 
+bitgen -intstyle ise -f vga_test.ut vga_test.ncd 

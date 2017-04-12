@@ -1,0 +1,799 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: vga_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga_test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga_test"
+Output Format                      : NGC
+Target Device                      : xc3s400a-4-ft256
+
+---- Source Options
+Top Module Name                    : vga_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ipcore_dir/ddsc.v" in library work
+Compiling verilog file "dcmip.v" in library work
+Module <ddsc> compiled
+Compiling verilog file "../vcntr.v" in library work
+Module <dcmip> compiled
+Compiling verilog file "../rsff.v" in library work
+Module <Vcounter> compiled
+Compiling verilog file "../rgboen.v" in library work
+Module <rsff> compiled
+Compiling verilog file "../hcntr.v" in library work
+Module <rgboen> compiled
+Compiling verilog file "../vga_test.v" in library work
+Module <Hcounter> compiled
+Module <vga_test> compiled
+No errors in compilation
+Analysis of file <"vga_test.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <vga_test> in library <work>.
+
+Analyzing hierarchy for module <dcmip> in library <work>.
+
+Analyzing hierarchy for module <Hcounter> in library <work>.
+
+Analyzing hierarchy for module <Vcounter> in library <work>.
+
+Analyzing hierarchy for module <rsff> in library <work>.
+
+Analyzing hierarchy for module <rgboen> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <vga_test>.
+WARNING:Xst:905 - "../vga_test.v" line 190: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <cosu>
+WARNING:Xst:905 - "../vga_test.v" line 328: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <sync_in_1>
+WARNING:Xst:2211 - "ipcore_dir/ddsc.v" line 121: Instantiating black box module <ddsc>.
+WARNING:Xst:2211 - "ipcore_dir/ddsc.v" line 130: Instantiating black box module <ddsc>.
+Module <vga_test> is correct for synthesis.
+ 
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <DDSM1> in unit <vga_test>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <DDSM1> in unit <vga_test>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <DDSM2> in unit <vga_test>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <DDSM2> in unit <vga_test>.
+Analyzing module <dcmip> in library <work>.
+Module <dcmip> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcmip>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcmip>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcmip>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcmip>.
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "CLKFX_DIVIDE =  4" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "CLKFX_MULTIPLY =  3" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "CLKIN_PERIOD =  15.001000" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <dcmip>.
+    Set property "SYN_NOPRUNE = 1" for unit <ddsc>.
+    Set property "SYN_NOPRUNE = 1" for unit <ddsc>.
+Analyzing module <Hcounter> in library <work>.
+Module <Hcounter> is correct for synthesis.
+ 
+Analyzing module <Vcounter> in library <work>.
+Module <Vcounter> is correct for synthesis.
+ 
+Analyzing module <rsff> in library <work>.
+Module <rsff> is correct for synthesis.
+ 
+Analyzing module <rgboen> in library <work>.
+Module <rgboen> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Hcounter>.
+    Related source file is "../hcntr.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <hde>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <hdeb>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <hd>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <hdebc>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 10-bit up counter for signal <cntrh>.
+    Found 10-bit comparator less for signal <cntrh$cmp_lt0000> created at line 17.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <Hcounter> synthesized.
+
+
+Synthesizing Unit <Vcounter>.
+    Related source file is "../vcntr.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <vrs>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <vrsp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <vr>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <vrspq>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 10-bit up counter for signal <cntrv>.
+    Found 10-bit comparator less for signal <cntrv$cmp_lt0000> created at line 16.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <Vcounter> synthesized.
+
+
+Synthesizing Unit <rsff>.
+    Related source file is "../rsff.v".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <rsff> synthesized.
+
+
+Synthesizing Unit <rgboen>.
+    Related source file is "../rgboen.v".
+Unit <rgboen> synthesized.
+
+
+Synthesizing Unit <dcmip>.
+    Related source file is "dcmip.v".
+Unit <dcmip> synthesized.
+
+
+Synthesizing Unit <vga_test>.
+    Related source file is "../vga_test.v".
+WARNING:Xst:646 - Signal <wdata> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sync_in_1n> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <coln> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <delay_st>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 1                                              |
+    | Clock              | VGA_VS                    (falling_edge)       |
+    | Clock enable       | sync_in_2                 (positive)           |
+    | Reset              | sync_in_1                 (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 11                                             |
+    | Power Up State     | 11                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8x64-bit ROM for signal <frame$rom0000>.
+    Found 8-bit register for signal <cdata>.
+    Found 8-bit adder for signal <cdata$addsub0000>.
+    Found 7-bit adder carry out for signal <cdata$addsub0001> created at line 200.
+    Found 1-bit register for signal <clk_25m>.
+    Found 3-bit up counter for signal <frame>.
+    Found 32-bit register for signal <phsr1>.
+    Found 32-bit register for signal <phsr2>.
+    Found 1-bit register for signal <sgnl>.
+    Found 1-bit register for signal <stch>.
+    Found 1-bit 8-to-1 multiplexer for signal <sync_out_2r>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  75 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <vga_test> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 8x64-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 7-bit adder carry out                                 : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 3-bit up counter                                      : 1
+# Registers                                            : 10
+ 1-bit register                                        : 7
+ 32-bit register                                       : 2
+ 8-bit register                                        : 1
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 2
+ 10-bit comparator less                                : 2
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <delay_st/FSM> on signal <delay_st[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 10
+ 01    | 11
+ 10    | 01
+ 11    | 00
+-------------------
+Reading core <ipcore_dir/ddsc.ngc>.
+Loading core <ddsc> for timing and area information for instance <DDSM1>.
+Loading core <ddsc> for timing and area information for instance <DDSM2>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 8x64-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 7-bit adder carry out                                 : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 3-bit up counter                                      : 1
+# Registers                                            : 79
+ Flip-Flops                                            : 79
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 2
+ 10-bit comparator less                                : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <vga_test>: instances <RED>, <GREEN> of unit <rgboen> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <vga_test>: instances <RED>, <BLUE> of unit <rgboen> are equivalent, second instance is removed
+WARNING:Xst:1710 - FF/Latch <phsr2_1> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_2> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_3> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_4> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_5> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_6> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_7> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_8> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_9> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_10> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_11> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_12> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_13> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_14> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_15> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_16> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_17> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_18> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_19> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_20> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_21> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_22> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_23> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_24> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_25> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_26> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_27> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_28> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_29> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_0> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_1> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_2> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_3> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_4> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_5> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_6> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_7> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_8> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_9> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_10> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_11> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_12> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_13> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_14> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_15> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_16> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_17> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_18> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_19> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_20> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_21> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_22> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_23> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_24> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_25> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_26> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_27> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr1_28> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <phsr2_0> (without init value) has a constant value of 0 in block <vga_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <phsr1_29> in Unit <vga_test> is equivalent to the following FF/Latch, which will be removed : <phsr2_30> 
+INFO:Xst:2261 - The FF/Latch <phsr1_30> in Unit <vga_test> is equivalent to the following FF/Latch, which will be removed : <phsr2_31> 
+
+Optimizing unit <vga_test> ...
+
+Optimizing unit <Hcounter> ...
+
+Optimizing unit <Vcounter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vga_test, actual ratio is 7.
+FlipFlop VSYNC/q has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : vga_test.ngr
+Top Level Output File Name         : vga_test
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 36
+
+Cell Usage :
+# BELS                             : 534
+#      GND                         : 3
+#      INV                         : 5
+#      LUT1                        : 18
+#      LUT2                        : 146
+#      LUT2_L                      : 1
+#      LUT3                        : 12
+#      LUT4                        : 34
+#      LUT4_L                      : 1
+#      MUXCY                       : 153
+#      MUXF5                       : 4
+#      VCC                         : 3
+#      XORCY                       : 154
+# FlipFlops/Latches                : 312
+#      FD                          : 205
+#      FDC_1                       : 1
+#      FDCE                        : 3
+#      FDCE_1                      : 2
+#      FDR                         : 88
+#      FDRE                        : 5
+#      LD                          : 8
+# RAMS                             : 2
+#      RAMB16BWE                   : 2
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 36
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 33
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400aft256-4 
+
+ Number of Slices:                      260  out of   3584     7%  
+ Number of Slice Flip Flops:            310  out of   7168     4%  
+ Number of 4 input LUTs:                217  out of   7168     3%  
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    195    18%  
+    IOB Flip Flops:                       2
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of GCLKs:                         5  out of     24    20%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------+------------------------+-------+
+Clock Signal                            | Clock buffer(FF name)  | Load  |
+----------------------------------------+------------------------+-------+
+clk_25m1                                | BUFG                   | 285   |
+VSYNC/q                                 | NONE(sgnl)             | 7     |
+srst(srst_cmp_eq000038:O)               | NONE(*)(phsr1_29)      | 3     |
+HCM1/hde_not0001(HCM1/hde_not00011:O)   | NONE(*)(HCM1/hde)      | 1     |
+HCM1/hdeb_not0001(HCM1/hdeb_not000133:O)| NONE(*)(HCM1/hdeb)     | 1     |
+HCM1/hd_not0001(HCM1/hd_not00011:O)     | NONE(*)(HCM1/hd)       | 2     |
+HCM1/hdebc                              | NONE(VCM1/cntrv_9)     | 10    |
+VCM1/vrs_not0001(VCM1/vrs_not0001_f5:O) | NONE(*)(VCM1/vrs)      | 1     |
+VCM1/vrsp_not0001(VCM1/vrsp_not00011:O) | NONE(*)(VCM1/vrsp)     | 1     |
+VCM1/vr_not0001(VCM1/vr_not00011:O)     | NONE(*)(VCM1/vr)       | 2     |
+CLOCK_66                                | DCMIP/DCM_SP_INST:CLKFX| 1     |
+----------------------------------------+------------------------+-------+
+(*) These 7 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------+------------------------+-------+
+Control Signal                                               | Buffer(FF name)        | Load  |
+-------------------------------------------------------------+------------------------+-------+
+delay_st_FSM_Acst_FSM_inv(delay_st_FSM_Acst_FSM_inv1_INV_0:O)| NONE(delay_st_FSM_FFd1)| 6     |
+-------------------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.243ns (Maximum Frequency: 160.179MHz)
+   Minimum input arrival time before clock: 3.707ns
+   Maximum output required time after clock: 7.122ns
+   Maximum combinational path delay: 7.145ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_25m1'
+  Clock period: 6.243ns (frequency: 160.179MHz)
+  Total number of paths / destination ports: 5794 / 256
+-------------------------------------------------------------------------
+Delay:               6.243ns (Levels of Logic = 10)
+  Source:            DDSM1/blk00000003/blk0000014a (RAM)
+  Destination:       cdata_6 (FF)
+  Source Clock:      clk_25m1 rising
+  Destination Clock: clk_25m1 rising
+
+  Data Path: DDSM1/blk00000003/blk0000014a to cdata_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWE:CLKB->DOB0    1   2.427   0.563  blk0000014a (cosine(0))
+     end scope: 'blk00000003'
+     end scope: 'DDSM1'
+     LUT2:I0->O            1   0.648   0.000  Madd_cdata_addsub0001_lut<0> (Madd_cdata_addsub0001_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_cdata_addsub0001_cy<0> (Madd_cdata_addsub0001_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_cdata_addsub0001_cy<1> (Madd_cdata_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_cdata_addsub0001_cy<2> (Madd_cdata_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_cdata_addsub0001_cy<3> (Madd_cdata_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_cdata_addsub0001_cy<4> (Madd_cdata_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_cdata_addsub0001_cy<5> (Madd_cdata_addsub0001_cy<5>)
+     MUXCY:CI->O           2   0.269   0.479  Madd_cdata_addsub0001_cy<6> (Madd_cdata_index0000)
+     LUT3:I2->O            1   0.648   0.000  cdata_mux0000<6>11 (cdata_mux0000<6>)
+     FD:D                      0.252          cdata_6
+    ----------------------------------------
+    Total                      6.243ns (5.201ns logic, 1.042ns route)
+                                       (83.3% logic, 16.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VSYNC/q'
+  Clock period: 2.544ns (frequency: 393.082MHz)
+  Total number of paths / destination ports: 11 / 6
+-------------------------------------------------------------------------
+Delay:               2.544ns (Levels of Logic = 1)
+  Source:            frame_0 (FF)
+  Destination:       frame_0 (FF)
+  Source Clock:      VSYNC/q falling
+  Destination Clock: VSYNC/q falling
+
+  Data Path: frame_0 to frame_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.591   0.633  frame_0 (frame_0)
+     INV:I->O              1   0.648   0.420  Mcount_frame_xor<0>11_INV_0 (Result<0>)
+     FDCE:D                    0.252          frame_0
+    ----------------------------------------
+    Total                      2.544ns (1.491ns logic, 1.053ns route)
+                                       (58.6% logic, 41.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'HCM1/hdebc'
+  Clock period: 5.588ns (frequency: 178.955MHz)
+  Total number of paths / destination ports: 155 / 20
+-------------------------------------------------------------------------
+Delay:               5.588ns (Levels of Logic = 3)
+  Source:            VCM1/cntrv_0 (FF)
+  Destination:       VCM1/cntrv_9 (FF)
+  Source Clock:      HCM1/hdebc rising
+  Destination Clock: HCM1/hdebc rising
+
+  Data Path: VCM1/cntrv_0 to VCM1/cntrv_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.591   0.776  VCM1/cntrv_0 (VCM1/cntrv_0)
+     LUT4_L:I0->LO         1   0.648   0.103  VCM1/cntrv_not00018 (VCM1/cntrv_not00018)
+     LUT4:I3->O            1   0.648   0.423  VCM1/cntrv_not000124_SW0 (N17)
+     LUT4:I3->O           10   0.648   0.882  VCM1/cntrv_not000124 (VCM1/cntrv_not0001)
+     FDR:R                     0.869          VCM1/cntrv_0
+    ----------------------------------------
+    Total                      5.588ns (3.404ns logic, 2.184ns route)
+                                       (60.9% logic, 39.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK_66'
+  Clock period: 1.493ns (frequency: 669.680MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.991ns (Levels of Logic = 0)
+  Source:            clk_25m (FF)
+  Destination:       clk_25m (FF)
+  Source Clock:      CLOCK_66 rising 0.8X
+  Destination Clock: CLOCK_66 rising 0.8X
+
+  Data Path: clk_25m to clk_25m
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.531  clk_25m (clk_25m1)
+     FDR:R                     0.869          clk_25m
+    ----------------------------------------
+    Total                      1.991ns (1.460ns logic, 0.531ns route)
+                                       (73.3% logic, 26.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VSYNC/q'
+  Total number of paths / destination ports: 12 / 9
+-------------------------------------------------------------------------
+Offset:              3.707ns (Levels of Logic = 2)
+  Source:            sync_in_1 (PAD)
+  Destination:       sgnl (FF)
+  Destination Clock: VSYNC/q rising
+
+  Data Path: sync_in_1 to sgnl
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.849   0.633  sync_in_1_IBUF (sync_in_1_IBUF)
+     INV:I->O              7   0.648   0.708  delay_st_FSM_Acst_FSM_inv1_INV_0 (delay_st_FSM_Acst_FSM_inv)
+     FDR:R                     0.869          sgnl
+    ----------------------------------------
+    Total                      3.707ns (2.366ns logic, 1.341ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK_66'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.642ns (Levels of Logic = 1)
+  Source:            clk_25m (FF)
+  Destination:       VGA_CLK (PAD)
+  Source Clock:      CLOCK_66 rising 0.8X
+
+  Data Path: clk_25m to VGA_CLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.531  clk_25m (clk_25m1)
+     OBUF:I->O                 4.520          VGA_CLK_OBUF (VGA_CLK)
+    ----------------------------------------
+    Total                      5.642ns (5.111ns logic, 0.531ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_25m1'
+  Total number of paths / destination ports: 75 / 27
+-------------------------------------------------------------------------
+Offset:              7.079ns (Levels of Logic = 2)
+  Source:            HDATO/q (FF)
+  Destination:       VGA_B<7> (PAD)
+  Source Clock:      clk_25m1 rising
+
+  Data Path: HDATO/q to VGA_B<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.591   0.789  HDATO/q (HDATO/q)
+     LUT4:I2->O            3   0.648   0.531  RED/dout<7>1 (VGA_R_7_OBUF)
+     OBUF:I->O                 4.520          VGA_B_7_OBUF (VGA_B<7>)
+    ----------------------------------------
+    Total                      7.079ns (5.759ns logic, 1.320ns route)
+                                       (81.4% logic, 18.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VSYNC/q'
+  Total number of paths / destination ports: 28 / 26
+-------------------------------------------------------------------------
+Offset:              7.122ns (Levels of Logic = 2)
+  Source:            sgnl (FF)
+  Destination:       VGA_B<7> (PAD)
+  Source Clock:      VSYNC/q rising
+
+  Data Path: sgnl to VGA_B<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.591   0.837  sgnl (sgnl)
+     LUT4:I1->O            3   0.643   0.531  RED/dout<7>1 (VGA_R_7_OBUF)
+     OBUF:I->O                 4.520          VGA_B_7_OBUF (VGA_B<7>)
+    ----------------------------------------
+    Total                      7.122ns (5.754ns logic, 1.368ns route)
+                                       (80.8% logic, 19.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               7.145ns (Levels of Logic = 3)
+  Source:            sync_in_1 (PAD)
+  Destination:       sync_out_2 (PAD)
+
+  Data Path: sync_in_1 to sync_out_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.849   0.713  sync_in_1_IBUF (sync_in_1_IBUF)
+     LUT4:I1->O            1   0.643   0.420  Mmux_sync_out_2r11 (sync_out_2_OBUF)
+     OBUF:I->O                 4.520          sync_out_2_OBUF (sync_out_2)
+    ----------------------------------------
+    Total                      7.145ns (6.012ns logic, 1.133ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to DDSM1.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to DDSM1.
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to DDSM2.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to DDSM2.
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.51 secs
+ 
+--> 
+
+Total memory usage is 280344 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   80 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

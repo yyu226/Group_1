@@ -1,0 +1,7 @@
+MO ddsc NULL ipcore_dir/ddsc.v vlg3A/ddsc.bin 1425499241
+MO vga_test NULL ../vga_test.v vlg15/vga__test.bin 1425499241
+MO dcmip NULL dcmip.v vlg1D/dcmip.bin 1425499241
+MO rgboen NULL ../rgboen.v vlg29/rgboen.bin 1425499241
+MO Hcounter NULL ../hcntr.v vlg38/_hcounter.bin 1425499241
+MO Vcounter NULL ../vcntr.v vlg2E/_vcounter.bin 1425499241
+MO rsff NULL ../rsff.v vlg49/rsff.bin 1425499241

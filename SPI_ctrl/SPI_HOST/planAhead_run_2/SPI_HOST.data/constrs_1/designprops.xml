@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="4">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+		<Mode Id="JTAG"/>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="cryst" OffChipTerm="NONE"/>
+		<Port Name="miso" OffChipTerm="NONE"/>
+		<Port Name="sck" OffChipTerm="FP_VCCO_10000"/>
+		<Port Name="mosi" OffChipTerm="FP_VTT_50"/>
+		<Port Name="cs" OffChipTerm="FP_VCCO_10000"/>
+		<Port Name="wLED" OffChipTerm="FP_VTT_50"/>
+	</PortProps>
+</Compat>
+

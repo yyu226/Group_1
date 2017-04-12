@@ -1,0 +1,557 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: hdmi_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "hdmi_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "hdmi_top"
+Output Format                      : NGC
+Target Device                      : xc6slx25-3-ftg256
+
+---- Source Options
+Top Module Name                    : hdmi_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\ipcore_dir\pll.v" into library work
+Parsing module <pll>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\ipcore_dir\pll\example_design\pll_exdes.v" into library work
+Parsing module <pll_exdes>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\TDMS_encoder.v" into library work
+Parsing module <TMDS_encoder>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\hdmi_top.v" into library work
+Parsing module <hdmi_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <hdmi_top>.
+
+Elaborating module <pll>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=5,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\ipcore_dir\pll.v" Line 128: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\ipcore_dir\pll.v" Line 129: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\hdmi_top.v" Line 91: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\hdmi_top.v" Line 101: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <TMDS_encoder>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\miniSpartan_hdmi\hdmi\hdmi_top.v" Line 134: Result of 32-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <OBUFDS>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <hdmi_top>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/minispartan_hdmi/hdmi/hdmi_top.v".
+    Found 1-bit register for signal <clock_25r>.
+    Found 10-bit register for signal <contX>.
+    Found 10-bit register for signal <contY>.
+    Found 1-bit register for signal <syncH>.
+    Found 1-bit register for signal <syncV>.
+    Found 1-bit register for signal <actvA>.
+    Found 8-bit register for signal <red>.
+    Found 8-bit register for signal <green>.
+    Found 8-bit register for signal <blue>.
+    Found 10-bit register for signal <TMDS_shift_red>.
+    Found 10-bit register for signal <TMDS_shift_green>.
+    Found 10-bit register for signal <TMDS_shift_blue>.
+    Found 4-bit register for signal <TMDS_modulo>.
+    Found 1-bit register for signal <shift_LOAD>.
+    Found 32-bit register for signal <cntr>.
+    Found 32-bit adder for signal <cntr[31]_GND_1_o_add_1_OUT> created at line 72.
+    Found 10-bit adder for signal <contX[9]_GND_1_o_add_7_OUT> created at line 91.
+    Found 10-bit adder for signal <contY[9]_GND_1_o_add_13_OUT> created at line 101.
+    Found 5-bit adder for signal <n0119[4:0]> created at line 134.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 108
+    Found 10-bit comparator greater for signal <contX[9]_PWR_1_o_LessThan_20_o> created at line 108
+    Found 10-bit comparator lessequal for signal <n0020> created at line 110
+    Found 10-bit comparator greater for signal <contY[9]_GND_1_o_LessThan_23_o> created at line 110
+    Found 10-bit comparator greater for signal <contX[9]_PWR_1_o_LessThan_25_o> created at line 112
+    Found 10-bit comparator greater for signal <contY[9]_GND_1_o_LessThan_26_o> created at line 112
+    Found 8-bit comparator equal for signal <W<7>> created at line 117
+    Found 2-bit comparator equal for signal <contY[4]_contX[4]_equal_32_o> created at line 120
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 115 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <hdmi_top> synthesized.
+
+Synthesizing Unit <pll>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/minispartan_hdmi/hdmi/ipcore_dir/pll.v".
+    Summary:
+	no macro.
+Unit <pll> synthesized.
+
+Synthesizing Unit <TMDS_encoder>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/minispartan_hdmi/hdmi/tdms_encoder.v".
+    Found 4-bit register for signal <balance_acc>.
+    Found 10-bit register for signal <TMDS>.
+    Found 4-bit subtractor for signal <balance_acc_inc> created at line 37.
+    Found 4-bit subtractor for signal <balance_acc[3]_balance_acc_inc[3]_sub_29_OUT> created at line 38.
+    Found 2-bit adder for signal <n0109[1:0]> created at line 29.
+    Found 3-bit adder for signal <n0112[2:0]> created at line 29.
+    Found 2-bit adder for signal <n0130[1:0]> created at line 34.
+    Found 3-bit adder for signal <n0133[2:0]> created at line 34.
+    Found 4-bit adder for signal <balance_acc[3]_balance_acc_inc[3]_add_29_OUT> created at line 38.
+    Found 4-bit adder for signal <_n0160> created at line 29.
+    Found 4-bit adder for signal <_n0161> created at line 29.
+    Found 4-bit adder for signal <_n0162> created at line 29.
+    Found 4-bit adder for signal <_n0163> created at line 29.
+    Found 4-bit adder for signal <Nb1s> created at line 29.
+    Found 4-bit adder for signal <_n0165> created at line 34.
+    Found 4-bit subtractor for signal <_n0166> created at line 34.
+    Found 4-bit adder for signal <_n0167> created at line 34.
+    Found 4-bit adder for signal <_n0168> created at line 34.
+    Found 4-bit adder for signal <_n0169> created at line 34.
+    Found 4-bit adder for signal <balance> created at line 34.
+    Found 4-bit comparator greater for signal <GND_6_o_Nb1s[3]_LessThan_8_o> created at line 30
+    Found 1-bit comparator equal for signal <balance_sign_eq> created at line 35
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <TMDS_encoder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 55
+ 10-bit adder                                          : 2
+ 2-bit adder                                           : 6
+ 3-bit adder                                           : 6
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 30
+ 4-bit addsub                                          : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 1
+# Registers                                            : 20
+ 1-bit register                                        : 3
+ 10-bit register                                       : 8
+ 2-bit register                                        : 1
+ 32-bit register                                       : 1
+ 4-bit register                                        : 4
+ 8-bit register                                        : 3
+# Comparators                                          : 14
+ 1-bit comparator equal                                : 3
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 2
+ 2-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 3
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 3
+ 10-bit 2-to-1 multiplexer                             : 9
+# Xors                                                 : 12
+ 1-bit xor2                                            : 3
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <TMDS_encoder>.
+The following registers are absorbed into accumulator <balance_acc>: 1 register on signal <balance_acc>.
+	The following adders/subtractors are grouped into adder tree <Madd_balance_Madd1> :
+ 	<Madd__n0169_Madd> in block <TMDS_encoder>, 	<Madd_n0130[1:0]> in block <TMDS_encoder>, 	<Madd_balance_Madd> in block <TMDS_encoder>.
+	The following adders/subtractors are grouped into adder tree <Madd_Nb1s_Madd1> :
+ 	<Madd__n0160> in block <TMDS_encoder>, 	<Madd__n0161> in block <TMDS_encoder>, 	<Madd__n0163_Madd> in block <TMDS_encoder>, 	<Madd_n0109[1:0]> in block <TMDS_encoder>, 	<Madd_Nb1s_Madd> in block <TMDS_encoder>.
+Unit <TMDS_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hdmi_top>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+The following registers are absorbed into counter <contX>: 1 register on signal <contX>.
+The following registers are absorbed into counter <contY>: 1 register on signal <contY>.
+The following registers are absorbed into counter <TMDS_modulo>: 1 register on signal <TMDS_modulo>.
+Unit <hdmi_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 4-bit adder carry in                                  : 3
+ 4-bit subtractor                                      : 6
+# Adder Trees                                          : 6
+ 4-bit / 4-inputs adder tree                           : 3
+ 4-bit / 6-inputs adder tree                           : 3
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Accumulators                                         : 3
+ 4-bit updown accumulator                              : 3
+# Registers                                            : 89
+ Flip-Flops                                            : 89
+# Comparators                                          : 14
+ 1-bit comparator equal                                : 3
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 2
+ 2-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 3
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 3
+ 10-bit 2-to-1 multiplexer                             : 9
+# Xors                                                 : 12
+ 1-bit xor2                                            : 3
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <red_0> in Unit <hdmi_top> is equivalent to the following FF/Latch, which will be removed : <red_1> 
+WARNING:Xst:2677 - Node <cntr_30> of sequential type is unconnected in block <hdmi_top>.
+WARNING:Xst:2677 - Node <cntr_31> of sequential type is unconnected in block <hdmi_top>.
+
+Optimizing unit <hdmi_top> ...
+
+Optimizing unit <TMDS_encoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block hdmi_top, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 154
+ Flip-Flops                                            : 154
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : hdmi_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 374
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 47
+#      LUT2                        : 18
+#      LUT3                        : 61
+#      LUT4                        : 14
+#      LUT5                        : 34
+#      LUT6                        : 95
+#      MUXCY                       : 47
+#      VCC                         : 1
+#      XORCY                       : 50
+# FlipFlops/Latches                : 154
+#      FD                          : 92
+#      FDR                         : 52
+#      FDRE                        : 10
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 13
+#      IBUFG                       : 1
+#      OBUF                        : 8
+#      OBUFDS                      : 4
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             154  out of  30064     0%  
+ Number of Slice LUTs:                  275  out of  15032     1%  
+    Number used as Logic:               275  out of  15032     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    280
+   Number with an unused Flip Flop:     126  out of    280    45%  
+   Number with an unused LUT:             5  out of    280     1%  
+   Number of fully used LUT-FF pairs:   149  out of    280    53%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    186     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock_50                           | DCM_SP:CLK0            | 31    |
+clock_50                           | DCM_SP:CLKFX           | 35    |
+clock_25r                          | BUFG                   | 88    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.660ns (Maximum Frequency: 93.805MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_50'
+  Clock period: 10.239ns (frequency: 97.663MHz)
+  Total number of paths / destination ports: 539 / 66
+-------------------------------------------------------------------------
+Delay:               2.048ns (Levels of Logic = 1)
+  Source:            TMDS_modulo_0 (FF)
+  Destination:       TMDS_modulo_0 (FF)
+  Source Clock:      clock_50 rising 5.0X
+  Destination Clock: clock_50 rising 5.0X
+
+  Data Path: TMDS_modulo_0 to TMDS_modulo_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   0.714  TMDS_modulo_0 (TMDS_modulo_0)
+     INV:I->O              1   0.206   0.579  TMDS_modulo_0_rstpot_INV_0 (TMDS_modulo_0_rstpot)
+     FD:D                      0.102          TMDS_modulo_0
+    ----------------------------------------
+    Total                      2.048ns (0.755ns logic, 1.293ns route)
+                                       (36.9% logic, 63.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_25r'
+  Clock period: 10.660ns (frequency: 93.805MHz)
+  Total number of paths / destination ports: 65403 / 160
+-------------------------------------------------------------------------
+Delay:               10.660ns (Levels of Logic = 10)
+  Source:            green_1 (FF)
+  Destination:       iGREEN/balance_acc_2 (FF)
+  Source Clock:      clock_25r rising
+  Destination Clock: clock_25r rising
+
+  Data Path: green_1 to iGREEN/balance_acc_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.447   1.013  green_1 (green_1)
+     LUT2:I0->O            2   0.203   0.617  iGREEN/ADDERTREE_INTERNAL_Madd3_lut<0>11 (iGREEN/ADDERTREE_INTERNAL_Madd3_lut<0>1)
+     LUT6:I5->O            1   0.205   0.580  iGREEN/ADDERTREE_INTERNAL_Madd41 (iGREEN/ADDERTREE_INTERNAL_Madd4)
+     LUT6:I5->O           16   0.205   1.005  iGREEN/XNOR2 (iGREEN/XNOR)
+     LUT6:I5->O            6   0.205   0.745  iGREEN/Mxor_q_m<7:1>_6_xo<0>1 (iGREEN/q_m<7>)
+     LUT6:I5->O            2   0.205   0.845  iGREEN/ADDERTREE_INTERNAL_Madd5_lut<0>1 (iGREEN/ADDERTREE_INTERNAL_Madd5_lut<0>)
+     LUT6:I3->O           10   0.205   0.857  iGREEN/ADDERTREE_INTERNAL_Madd7_cy<0>21 (iGREEN/ADDERTREE_INTERNAL_Madd7_cy<0>1)
+     LUT6:I5->O            7   0.205   0.774  iGREEN/GND_6_o_GND_6_o_OR_54_o (iGREEN/GND_6_o_GND_6_o_OR_54_o)
+     LUT5:I4->O           12   0.205   0.909  iGREEN/Mmux_invert_q_m11 (iGREEN/invert_q_m)
+     LUT6:I5->O            2   0.205   0.721  iGREEN/Maccum_balance_acc_lut<2>1 (iGREEN/Maccum_balance_acc_lut<2>)
+     LUT6:I4->O            1   0.203   0.000  iGREEN/Maccum_balance_acc_xor<2>11 (iGREEN/Result<2>)
+     FDR:D                     0.102          iGREEN/balance_acc_2
+    ----------------------------------------
+    Total                     10.660ns (2.595ns logic, 8.065ns route)
+                                       (24.3% logic, 75.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_50'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            cntr_29 (FF)
+  Destination:       LED<1> (PAD)
+  Source Clock:      clock_50 rising
+
+  Data Path: cntr_29 to LED<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  cntr_29 (cntr_29)
+     OBUF:I->O                 2.571          LED_1_OBUF (LED<1>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock_25r
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock_25r      |   10.660|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock_25r      |    1.562|         |         |         |
+clock_50       |    2.218|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.89 secs
+ 
+--> 
+
+Total memory usage is 254852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

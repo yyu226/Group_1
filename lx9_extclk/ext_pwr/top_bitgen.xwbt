@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\ISEproj\lx9_extclk\ext_pwr\top.ncd
+OUTFILE=C:\Users\yingyu\Desktop\ISEproj\lx9_extclk\ext_pwr\top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=C:\Users\yingyu\Desktop\ISEproj\lx9_extclk\ext_pwr
+LICENSE=WebPack
+USER_INFO=210981254_0_0_774

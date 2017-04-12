@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.ncd
+OUTFILE=C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase
+LICENSE=WebPack
+USER_INFO=210981254_0_0_774

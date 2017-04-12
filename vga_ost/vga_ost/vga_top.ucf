@@ -1,0 +1,10 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = R9;
+NET "led" LOC = T10;
+NET "ledbar" LOC = B15;
+
+# PlanAhead Generated IO constraints 
+
+NET "clk" SLEW = SLOW;

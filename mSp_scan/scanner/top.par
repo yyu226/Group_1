@@ -1,0 +1,206 @@
+Release 13.3 par O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+LAU-PC::  Fri Dec 04 16:51:23 2015
+
+par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
+
+
+Constraints file: top.pcf.
+Loading device for application Rf_Device from file '6slx25.nph' in environment C:\Xilinx\13.3\ISE_DS\ISE\.
+   "top" is an NCD, version 3.2, device xc6slx25, package ftg256, speed -3
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.20 2011-10-03".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,289 out of  30,064    4%
+    Number used as Flip Flops:               1,288
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      1,446 out of  15,032    9%
+    Number used as logic:                    1,349 out of  15,032    8%
+      Number using O6 output only:             749
+      Number using O5 output only:             126
+      Number using O5 and O6:                  474
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   3,664    0%
+    Number used exclusively as route-thrus:     97
+      Number with same-slice register load:     88
+      Number with same-slice carry load:         9
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   582 out of   3,758   15%
+  Nummber of MUXCYs used:                      216 out of   7,516    2%
+  Number of LUT Flip Flop pairs used:        1,689
+    Number with an unused Flip Flop:           554 out of   1,689   32%
+    Number with an unused LUT:                 243 out of   1,689   14%
+    Number of fully used LUT-FF pairs:         892 out of   1,689   52%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  30,064    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        60 out of     186   32%
+    Number of LOCed IOBs:                       56 out of      60   93%
+    IOB Flip Flops:                              1
+    IOB Master Pads:                             4
+    IOB Slave Pads:                              4
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      52    0%
+  Number of RAMB8BWERs:                          2 out of     104    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       8 out of      16   50%
+    Number used as BUFGs:                        8
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     272    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     272    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     272    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     160    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      38    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
+
+Starting Router
+
+
+Phase  1  : 8564 unrouted;      REAL time: 8 secs 
+
+Phase  2  : 7429 unrouted;      REAL time: 10 secs 
+
+Phase  3  : 3173 unrouted;      REAL time: 17 secs 
+
+Phase  4  : 3245 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+
+Updating file: top.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 29 secs 
+Total REAL time to Router completion: 29 secs 
+Total CPU time to Router completion: 29 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 800876 (Setup: 800876, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net IS0 | SETUP       |         N/A|  5291.755ns|     N/A|      482716
+  /cntr_2_BUFG                              | HOLD        |     0.421ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.474ns|     N/A|           0
+  _100ld                                    | HOLD        |     0.404ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|    63.695ns|     N/A|      318075
+  ck_25m_BUFG                               | HOLD        |     0.423ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net IS0 | SETUP       |         N/A|    10.970ns|     N/A|           0
+  /cntr<6>                                  | HOLD        |     0.393ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     2.154ns|     N/A|           0
+  ck_250M                                   | HOLD        |     0.442ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     4.687ns|     N/A|           0
+  ck_45M                                    | HOLD        |     0.431ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net IS0 | SETUP       |         N/A|     3.154ns|     N/A|          85
+  /WR_CLK                                   | HOLD        |     0.157ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     2.062ns|     N/A|           0
+  ck_50M                                    | HOLD        |     0.467ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+3 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 30 secs 
+Total CPU time to PAR completion: 30 secs 
+
+Peak Memory Usage:  370 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file top.ncd
+
+
+
+PAR done!

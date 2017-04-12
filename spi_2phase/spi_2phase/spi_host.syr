@@ -1,0 +1,781 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: spi_host.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "spi_host.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "spi_host"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : spi_host
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\ipcore_dir\dcm.v" into library work
+Parsing module <dcm>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\ipcore_dir\dcm\example_design\dcm_exdes.v" into library work
+Parsing module <dcm_exdes>.
+Analyzing Verilog file "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" into library work
+Parsing module <spi_host>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <spi_host>.
+
+Elaborating module <dcm>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=4,CLKFX_MULTIPLY=15,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=83.3333333333,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\ipcore_dir\dcm.v" Line 126: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\ipcore_dir\dcm.v" Line 127: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 97: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 219: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 249: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 639: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 969: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 1067: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 1095: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 1111: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 1125: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\yingyu\Desktop\ISEproj\spi_2phase\spi_2phase\spi_host.v" Line 1138: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <spi_host>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/spi_2phase/spi_2phase/spi_host.v".
+    Found 8-bit register for signal <state>.
+    Found 1-bit register for signal <clk_sel>.
+    Found 8-bit register for signal <rcmd1>.
+    Found 8-bit register for signal <rcmd2>.
+    Found 8-bit register for signal <rcmd3>.
+    Found 8-bit register for signal <rcmd4>.
+    Found 8-bit register for signal <rcmd5>.
+    Found 8-bit register for signal <rcmd6>.
+    Found 1-bit register for signal <mo>.
+    Found 1-bit register for signal <cs1>.
+    Found 5-bit register for signal <ncr>.
+    Found 8-bit register for signal <nxt>.
+    Found 8-bit register for signal <rcvb>.
+    Found 3-bit register for signal <led_control>.
+    Found 8-bit register for signal <s2>.
+    Found 8-bit register for signal <n2>.
+    Found 8-bit register for signal <rcvb2>.
+    Found 32-bit register for signal <block>.
+    Found 3-bit register for signal <led_control2>.
+    Found 1-bit register for signal <m2>.
+    Found 1-bit register for signal <cs2>.
+    Found 8-bit register for signal <rcmd1i>.
+    Found 8-bit register for signal <rcmd2i>.
+    Found 8-bit register for signal <rcmd3i>.
+    Found 8-bit register for signal <rcmd4i>.
+    Found 8-bit register for signal <rcmd5i>.
+    Found 5-bit register for signal <ncr2>.
+    Found 10-bit register for signal <bc>.
+    Found 16-bit register for signal <delay>.
+    Found 8-bit register for signal <dctr>.
+    Found 1-bit register for signal <reset>.
+    Found 7-bit register for signal <cntr>.
+    Found 7-bit adder for signal <cntr[6]_GND_1_o_add_1_OUT> created at line 97.
+    Found 5-bit adder for signal <ncr[4]_GND_1_o_add_11_OUT> created at line 249.
+    Found 8-bit adder for signal <state[7]_GND_1_o_add_146_OUT> created at line 639.
+    Found 32-bit adder for signal <block[31]_GND_1_o_add_313_OUT> created at line 948.
+    Found 8-bit adder for signal <s2[7]_GND_1_o_add_320_OUT> created at line 969.
+    Found 5-bit adder for signal <ncr2[4]_GND_1_o_add_367_OUT> created at line 1067.
+    Found 10-bit adder for signal <bc[9]_GND_1_o_add_372_OUT> created at line 1111.
+    Found 16-bit adder for signal <delay[15]_GND_1_o_add_373_OUT> created at line 1125.
+    Found 8-bit adder for signal <dctr[7]_GND_1_o_add_508_OUT> created at line 1138.
+    Found 5-bit comparator greater for signal <ncr[4]_GND_1_o_LessThan_68_o> created at line 488
+    Found 5-bit comparator greater for signal <ncr[4]_GND_1_o_LessThan_141_o> created at line 619
+    Found 5-bit comparator greater for signal <ncr2[4]_GND_1_o_LessThan_229_o> created at line 762
+    Found 5-bit comparator greater for signal <ncr2[4]_PWR_1_o_LessThan_278_o> created at line 875
+    Found 10-bit comparator greater for signal <bc[9]_PWR_1_o_LessThan_313_o> created at line 943
+    Found 32-bit comparator greater for signal <GND_1_o_block[31]_LessThan_317_o> created at line 954
+    Found 16-bit comparator greater for signal <delay[15]_GND_1_o_LessThan_319_o> created at line 962
+    Found 8-bit comparator greater for signal <dctr[7]_GND_1_o_LessThan_508_o> created at line 1136
+    Found 8-bit comparator greater for signal <dctr[7]_GND_1_o_LessThan_511_o> created at line 1141
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred 231 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred 156 Multiplexer(s).
+Unit <spi_host> synthesized.
+
+Synthesizing Unit <dcm>.
+    Related source file is "c:/users/yingyu/desktop/iseproj/spi_2phase/spi_2phase/ipcore_dir/dcm.v".
+    Summary:
+	no macro.
+Unit <dcm> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 10-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 29
+ 1-bit register                                        : 6
+ 10-bit register                                       : 1
+ 16-bit register                                       : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 2
+ 5-bit register                                        : 2
+ 7-bit register                                        : 1
+ 8-bit register                                        : 14
+# Comparators                                          : 9
+ 10-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 1
+ 5-bit comparator greater                              : 4
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 156
+ 1-bit 2-to-1 multiplexer                              : 100
+ 10-bit 2-to-1 multiplexer                             : 2
+ 5-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 47
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch led_control2_2 hinder the constant cleaning in the block spi_host.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch led_control_2 hinder the constant cleaning in the block spi_host.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rcmd3_0> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_1> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_2> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_3> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_4> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_5> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_6> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_7> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_0> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_4> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_6> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <led_control_0> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <led_control_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_7> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_0> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_6> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_7> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_6> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2404 -  FFs/Latches <rcmd1i<7:7>> (without init value) have a constant value of 0 in block <spi_host>.
+
+Synthesizing (advanced) Unit <spi_host>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+The following registers are absorbed into counter <dctr>: 1 register on signal <dctr>.
+The following registers are absorbed into counter <block>: 1 register on signal <block>.
+The following registers are absorbed into counter <delay>: 1 register on signal <delay>.
+Unit <spi_host> synthesized (advanced).
+WARNING:Xst:2677 - Node <led_control_0> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <led_control_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd1i_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_0> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd2_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_1> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_3> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_5> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_6> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd4_7> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_2> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_4> of sequential type is unconnected in block <spi_host>.
+WARNING:Xst:2677 - Node <rcmd5_6> of sequential type is unconnected in block <spi_host>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 10-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 2
+# Counters                                             : 4
+ 16-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 7-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 145
+ Flip-Flops                                            : 145
+# Comparators                                          : 9
+ 10-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 1
+ 5-bit comparator greater                              : 4
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 155
+ 1-bit 2-to-1 multiplexer                              : 100
+ 10-bit 2-to-1 multiplexer                             : 2
+ 5-bit 2-to-1 multiplexer                              : 7
+ 8-bit 2-to-1 multiplexer                              : 46
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch led_control2_2 hinder the constant cleaning in the block spi_host.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch led_control_2 hinder the constant cleaning in the block spi_host.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rcmd3_0> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_1> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_2> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_3> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_4> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_5> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_6> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd3_7> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_0> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_4> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1i_6> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1_6> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd1_7> (without init value) has a constant value of 0 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd6_0> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rcmd6_2> (without init value) has a constant value of 1 in block <spi_host>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <rcmd2_7> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd5_0> 
+INFO:Xst:2261 - The FF/Latch <rcmd6_5> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd6_6> 
+INFO:Xst:2261 - The FF/Latch <rcmd4_0> in Unit <spi_host> is equivalent to the following 4 FFs/Latches, which will be removed : <rcmd5_1> <rcmd5_3> <rcmd5_5> <rcmd5_7> 
+INFO:Xst:2261 - The FF/Latch <rcmd1_0> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd1_5> 
+INFO:Xst:2261 - The FF/Latch <rcmd1_1> in Unit <spi_host> is equivalent to the following FF/Latch, which will be removed : <rcmd1_2> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    state_0 in unit <spi_host>
+
+WARNING:Xst:2016 - Found a loop when searching source clock on port 'cntr<6>_inv:O'
+Last warning will be issued only once.
+
+Optimizing unit <spi_host> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block spi_host, actual ratio is 8.
+WARNING:Xst:1426 - The value init of the FF/Latch state_0_LD hinder the constant cleaning in the block spi_host.
+   You should achieve better results by setting this init to 1.
+FlipFlop cntr_2 has been replicated 1 time(s)
+FlipFlop s2_0 has been replicated 2 time(s)
+FlipFlop s2_1 has been replicated 2 time(s)
+FlipFlop s2_2 has been replicated 2 time(s)
+FlipFlop s2_3 has been replicated 3 time(s)
+FlipFlop s2_4 has been replicated 2 time(s)
+FlipFlop s2_5 has been replicated 3 time(s)
+FlipFlop s2_6 has been replicated 2 time(s)
+FlipFlop s2_7 has been replicated 2 time(s)
+FlipFlop state_1 has been replicated 1 time(s)
+FlipFlop state_2 has been replicated 2 time(s)
+FlipFlop state_3 has been replicated 2 time(s)
+FlipFlop state_4 has been replicated 1 time(s)
+FlipFlop state_5 has been replicated 1 time(s)
+FlipFlop state_6 has been replicated 2 time(s)
+FlipFlop state_7 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 216
+ Flip-Flops                                            : 216
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : spi_host.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 623
+#      GND                         : 1
+#      INV                         : 8
+#      LUT1                        : 46
+#      LUT2                        : 27
+#      LUT3                        : 49
+#      LUT4                        : 38
+#      LUT5                        : 98
+#      LUT6                        : 225
+#      MUXCY                       : 60
+#      MUXF7                       : 14
+#      VCC                         : 1
+#      XORCY                       : 56
+# FlipFlops/Latches                : 217
+#      FD                          : 40
+#      FD_1                        : 4
+#      FDC_1                       : 18
+#      FDE                         : 60
+#      FDE_1                       : 66
+#      FDP_1                       : 1
+#      FDR_1                       : 27
+#      LD                          : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 7
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             217  out of  11440     1%  
+ Number of Slice LUTs:                  491  out of   5720     8%  
+    Number used as Logic:               491  out of   5720     8%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    584
+   Number with an unused Flip Flop:     367  out of    584    62%  
+   Number with an unused LUT:            93  out of    584    15%  
+   Number of fully used LUT-FF pairs:   124  out of    584    21%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    186     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+cntr_6                             | BUFG                   | 66    |
+cntr_2                             | BUFG                   | 142   |
+cryst                              | DCM_SP:CLKFX           | 8     |
+reset                              | NONE(state_0_LD)       | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.721ns (Maximum Frequency: 93.274MHz)
+   Minimum input arrival time before clock: 6.173ns
+   Maximum output required time after clock: 4.832ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cntr_6'
+  Clock period: 10.721ns (frequency: 93.274MHz)
+  Total number of paths / destination ports: 2851 / 114
+-------------------------------------------------------------------------
+Delay:               5.361ns (Levels of Logic = 4)
+  Source:            state_0_C_0 (FF)
+  Destination:       nxt_0 (FF)
+  Source Clock:      cntr_6 falling
+  Destination Clock: cntr_6 rising
+
+  Data Path: state_0_C_0 to nxt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q            16   0.447   1.109  state_0_C_0 (state_0_C_0)
+     LUT3:I1->O           19   0.203   1.072  state_01_1 (state_01)
+     LUT6:I5->O           16   0.205   1.005  state[7]_GND_1_o_equal_165_o<7>1 (state[7]_GND_1_o_equal_165_o)
+     LUT6:I5->O            1   0.205   0.808  state[7]_GND_1_o_select_178_OUT<0>2 (state[7]_GND_1_o_select_178_OUT<0>2)
+     LUT6:I3->O            1   0.205   0.000  state[7]_GND_1_o_select_178_OUT<0>6 (state[7]_GND_1_o_select_178_OUT<0>)
+     FD:D                      0.102          nxt_0
+    ----------------------------------------
+    Total                      5.361ns (1.367ns logic, 3.994ns route)
+                                       (25.5% logic, 74.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cntr_2'
+  Clock period: 10.414ns (frequency: 96.026MHz)
+  Total number of paths / destination ports: 4822 / 239
+-------------------------------------------------------------------------
+Delay:               5.207ns (Levels of Logic = 4)
+  Source:            s2_1_1 (FF)
+  Destination:       n2_6 (FF)
+  Source Clock:      cntr_2 falling
+  Destination Clock: cntr_2 rising
+
+  Data Path: s2_1_1 to n2_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q           12   0.447   1.137  s2_1_1 (s2_1_1)
+     LUT3:I0->O           19   0.205   1.176  s2[7]_GND_1_o_equal_378_o<7>11 (s2[7]_GND_1_o_equal_378_o<7>1)
+     LUT5:I3->O            2   0.203   0.721  s2[7]_PWR_1_o_Select_484_o<1>51 (s2[7]_PWR_1_o_Select_484_o<1>5)
+     LUT5:I3->O            1   0.203   0.808  s2[7]_GND_1_o_select_358_OUT<6>1 (s2[7]_GND_1_o_select_358_OUT<6>1)
+     LUT6:I3->O            1   0.205   0.000  s2[7]_GND_1_o_select_358_OUT<6>5 (s2[7]_GND_1_o_select_358_OUT<6>)
+     FD:D                      0.102          n2_6
+    ----------------------------------------
+    Total                      5.207ns (1.365ns logic, 3.842ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cryst'
+  Clock period: 9.228ns (frequency: 108.370MHz)
+  Total number of paths / destination ports: 31 / 8
+-------------------------------------------------------------------------
+Delay:               2.461ns (Levels of Logic = 2)
+  Source:            cntr_2_1 (FF)
+  Destination:       cntr_6 (FF)
+  Source Clock:      cryst rising 3.8X
+  Destination Clock: cryst rising 3.8X
+
+  Data Path: cntr_2_1 to cntr_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.924  cntr_2_1 (cntr_2_1)
+     LUT5:I0->O            1   0.203   0.580  Mcount_cntr_cy<4>11 (Mcount_cntr_cy<4>)
+     LUT3:I2->O            1   0.205   0.000  Mcount_cntr_xor<6>11 (Result<6>)
+     FD:D                      0.102          cntr_6
+    ----------------------------------------
+    Total                      2.461ns (0.957ns logic, 1.504ns route)
+                                       (38.9% logic, 61.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cntr_6'
+  Total number of paths / destination ports: 14 / 13
+-------------------------------------------------------------------------
+Offset:              5.234ns (Levels of Logic = 4)
+  Source:            miso (PAD)
+  Destination:       nxt_0 (FF)
+  Destination Clock: cntr_6 rising
+
+  Data Path: miso to nxt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            46   1.222   1.491  miso_IBUF (miso_IBUF)
+     LUT5:I4->O            1   0.205   0.944  state[7]_GND_1_o_select_178_OUT<6>51 (state[7]_GND_1_o_select_178_OUT<6>51)
+     LUT6:I0->O            2   0.203   0.864  state[7]_GND_1_o_select_178_OUT<6>55_SW0 (N98)
+     LUT6:I2->O            1   0.203   0.000  state[7]_GND_1_o_select_178_OUT<6>5 (state[7]_GND_1_o_select_178_OUT<6>)
+     FD:D                      0.102          nxt_6
+    ----------------------------------------
+    Total                      5.234ns (1.935ns logic, 3.299ns route)
+                                       (37.0% logic, 63.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cntr_2'
+  Total number of paths / destination ports: 36 / 14
+-------------------------------------------------------------------------
+Offset:              6.173ns (Levels of Logic = 5)
+  Source:            miso (PAD)
+  Destination:       n2_1 (FF)
+  Destination Clock: cntr_2 rising
+
+  Data Path: miso to n2_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            46   1.222   1.835  miso_IBUF (miso_IBUF)
+     LUT5:I0->O            1   0.203   0.808  s2[7]_GND_1_o_select_358_OUT<1>4_SW0 (N243)
+     LUT6:I3->O            1   0.205   0.808  s2[7]_GND_1_o_select_358_OUT<1>4 (s2[7]_GND_1_o_select_358_OUT<1>4)
+     LUT6:I3->O            1   0.205   0.580  s2[7]_GND_1_o_select_358_OUT<1>2_SW2 (N257)
+     LUT6:I5->O            1   0.205   0.000  s2[7]_GND_1_o_select_358_OUT<1>7 (s2[7]_GND_1_o_select_358_OUT<1>)
+     FD:D                      0.102          n2_1
+    ----------------------------------------
+    Total                      6.173ns (2.142ns logic, 4.031ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cntr_6'
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Offset:              4.832ns (Levels of Logic = 2)
+  Source:            clk_sel (FF)
+  Destination:       sck (PAD)
+  Source Clock:      cntr_6 falling
+
+  Data Path: clk_sel to sck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             8   0.447   1.031  clk_sel (clk_sel)
+     LUT3:I0->O            1   0.205   0.579  Mmux_sck11 (sck_OBUF)
+     OBUF:I->O                 2.571          sck_OBUF (sck)
+    ----------------------------------------
+    Total                      4.832ns (3.223ns logic, 1.609ns route)
+                                       (66.7% logic, 33.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cryst'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.521ns (Levels of Logic = 2)
+  Source:            cntr_6 (FF)
+  Destination:       sck (PAD)
+  Source Clock:      cryst rising 3.8X
+
+  Data Path: cntr_6 to sck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.721  cntr_6 (cntr_6)
+     LUT3:I1->O            1   0.203   0.579  Mmux_sck11 (sck_OBUF)
+     OBUF:I->O                 2.571          sck_OBUF (sck)
+    ----------------------------------------
+    Total                      4.521ns (3.221ns logic, 1.300ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cntr_2'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.453ns (Levels of Logic = 2)
+  Source:            cs2 (FF)
+  Destination:       cs (PAD)
+  Source Clock:      cntr_2 falling
+
+  Data Path: cs2 to cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             3   0.447   0.651  cs2 (cs2)
+     LUT3:I2->O            1   0.205   0.579  Mmux_cs11 (cs_OBUF)
+     OBUF:I->O                 2.571          cs_OBUF (cs)
+    ----------------------------------------
+    Total                      4.453ns (3.223ns logic, 1.230ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock cntr_2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cntr_2         |    4.646|    5.207|    6.710|         |
+cntr_6         |         |         |    3.090|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cntr_6
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cntr_6         |    7.152|    5.361|    6.610|         |
+reset          |         |    5.538|    6.787|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cryst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+cryst          |    2.461|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.42 secs
+ 
+--> 
+
+Total memory usage is 262812 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   90 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

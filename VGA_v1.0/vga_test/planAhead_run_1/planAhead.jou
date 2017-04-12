@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.3 (64-bit)
+# Build 147507 by hdbuild on Tue Oct  4 19:13:50 MDT 2011
+# Start of session at: Tue Mar 01 16:25:22 2016
+# Process ID: 1180
+# Log file: C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/yingyu/Desktop/ISEproj/VGA_v1.0/vga_test/pa.fromNetlist.tcl
+exit
+stop_gui
